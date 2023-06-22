@@ -44,35 +44,36 @@ export default function LoadingScreen() {
           duration: 2,
           ease: "power1"
         }, "sequence-1")
+
         .to(".upperSec", {
-          delay: 1.75,
+          delay: 2.25,
           duration: 1.75,
           y: "100",
           opacity: 0,
           ease: "power3"
         }, "sequence-1")
         .to(".lowerSec", {
-          delay: 1.75,
+          delay: 2.25,
           duration: 1.75,
           y: "-100",
           opacity: 0,
           ease: "power3"
         }, "sequence-1")
         .to(".center-description", {
-          delay: 2,
+          delay: 2.5,
           duration: 2,
           scale: 0.5,
           opacity: 0,
           ease: "power3"
         }, "sequence-1")
         .to(".center-animation", {
-          delay: 2,
+          delay: 2.5,
           duration: 2,
           opacity: 0,
           ease: "power3"
         }, "sequence-1")
         .to(".loading-container", {
-          delay: 2.75,
+          delay: 3.25,
           opacity: 0,
           duration: 1,
           ease: "power3"
