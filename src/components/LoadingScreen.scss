@@ -69,27 +69,34 @@
     }
 
     .turning-piece {
-      position: relative;
-      top: 30vh;
+      position: absolute;
       outline: 2px red solid;
-      height: 40vh;
+      height: 100vh;
+      width: 100vw;
+      transform: rotate(25deg);
+      animation: rotate 3s ease-in-out 0.5s 1 normal forwards;
 
       .skew-1 {
-        position: inherit;
-        border-bottom: 1px solid rgb(21, 0, 255);
-        top: 20vh;
-        width: 80vw;
-        margin: auto auto;
-        transform: rotate(-30deg);
+        position: absolute;
+        border-left: 2px solid rgb(21, 0, 255);
+        height: 150vh;
+        left: 50vw;
+        top: 12.5vh;
       }
 
-      // .skew-2 {
-      //   position: inherit;
-      //   border-bottom: 1px solid rgb(34, 255, 0);
-      //   top: 20vh;
-      //   width: 75vw;
-      //   margin: auto;
-      // }
+      .skew-2 {
+        position: absolute;
+        border-top: 2px solid rgb(21, 0, 255);
+        top: 50vh;
+        width: 50vw;
+        left: 25vw;
+      }
     }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(45deg);
   }
 }
