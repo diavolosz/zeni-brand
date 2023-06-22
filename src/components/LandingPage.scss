@@ -9,14 +9,37 @@
   .image-wrapper {
     height: 100vh;
     width: 100vw;
-
+        
     .cinematic-shot {
+      position: absolute;
       height: 100%;
       width: 100%;
       object-fit: cover;
       display: block;
       object-position: 0 70%;
       filter: brightness(0.85);
+      scale: 1;
+      
+
+    }
+
+    div {
+      position: absolute;
+      width: 100vw;
+      margin: auto;
+      top: 47%;   
+      left: 2%; 
+      
+      span {
+        position: absolute;
+        font-size: 26vw;
+        font-family: 'silk-serif';
+        color: #D1CFC8;
+        opacity: 1;
+      }
+      .right {
+        left: 68vw;
+      }
     }
   }
   
