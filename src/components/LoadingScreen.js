@@ -1,20 +1,102 @@
+import { useEffect, useRef } from "react"
 import "./LoadingScreen.scss"
-
+import { gsap } from "gsap"
 
 
 
 export default function LoadingScreen() {
+
+  const tl = useRef(null)
+
+  useEffect(() => {
+
+    let ctx = gsap.context(() => {
+      // all your GSAP animation code here
+      tl.current = gsap.timeline()
+        .from(".upperSec", {
+          duration: 2,
+          y: "-500",
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .from(".lowerSec", {
+          duration: 2,
+          y: "500",
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .from(".center-description", {
+          delay: 0.25,
+          duration: 2,
+          scale: 0.5,
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .from(".center-animation", {
+          delay: 0.5,
+          duration: 3,
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .from(".turning-piece", {
+          rotate: 0,
+          delay: 1,
+          duration: 2,
+          ease: "power1"
+        }, "sequence-1")
+        .to(".upperSec", {
+          delay: 1.75,
+          duration: 1.75,
+          y: "100",
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .to(".lowerSec", {
+          delay: 1.75,
+          duration: 1.75,
+          y: "-100",
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .to(".center-description", {
+          delay: 2,
+          duration: 2,
+          scale: 0.5,
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .to(".center-animation", {
+          delay: 2,
+          duration: 2,
+          opacity: 0,
+          ease: "power3"
+        }, "sequence-1")
+        .to(".loading-container", {
+          delay: 2.75,
+          opacity: 0,
+          duration: 1,
+          ease: "power3"
+        }, "sequence-1")
+    });
+    return () => ctx.revert(); // <- cleanup!
+  },[])
+
+
   return (
-    <div className="loading-container">
+    <div className="loading-container" ref={tl}>
       <div className="name-container">
-        <div className="row upper">
+        <div className="row upperSec">
           <span className="upper">Z</span>
           <span className="upper">E</span>
         </div>
-        <div className="row">
+        <div className="row lowerSec">
           <span className="lower">I</span>
           <span className="lower">N</span>
         </div>
+      </div>
+
+      <div className="center-description">
+        <p>ZENI is a clothing-based creative studio that embodies neutrality, elegance, and peacefulness in each meticulously crafted artworks.</p>
       </div>
 
       <div className="center-animation">
@@ -26,6 +108,7 @@ export default function LoadingScreen() {
           <div className="line skew-5"></div>
         </div>
       </div>
+
     </div>
   )
 }
