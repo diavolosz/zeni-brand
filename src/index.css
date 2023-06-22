@@ -197,7 +197,7 @@ body::-webkit-scrollbar  {
     display: none;
 }
 
-.disabled-scroll {
+/* .disabled-scroll {
     overflow-y: hidden;
-}
+} */
 

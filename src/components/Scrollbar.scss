@@ -1,0 +1,29 @@
+.scrollbar-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 10px;
+  background-color: #A7B1AB;
+  /* Adjust the background color as per your preference */
+  z-index: 9999;
+  /* Ensure the scrollbar appears above other elements */
+  opacity: 0;
+  transition: 0.75s;
+  
+  .scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #515151;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 24px;
+  }
+}
+
+
+
+.show {
+  opacity: 1;
+}

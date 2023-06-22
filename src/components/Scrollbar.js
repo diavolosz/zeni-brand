@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Scrollbar.css';
+import './Scrollbar.scss';
 
 function Scrollbar() {
   const [scrollPosition, setScrollPosition] = useState(0);

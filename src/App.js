@@ -11,6 +11,9 @@ function App() {
   let body = document.querySelector('body')
 
   useEffect(() => {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 100);
     body.classList.add('disabled-scroll')
     setTimeout(() => {
       setLoading(false)
@@ -19,13 +22,13 @@ function App() {
   }, [])
 
   return (
-    <div className={`App ${loading? "disabled-scroll": ""}`}>
+    <div className={`App ${loading ? "disabled-scroll" : ""}`}>
 
       <Scrollbar />
 
-      {loading? <LoadingScreen /> : null}
-    
-      
+      {loading ? <LoadingScreen /> : null}
+
+
       <LandingPage />
 
     </div>
