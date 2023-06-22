@@ -21,6 +21,9 @@ export default function LoadingScreen() {
         <div className="turning-piece">
           <div className="line skew-1"></div>
           <div className="line skew-2"></div>
+          <div className="line skew-3"></div>
+          <div className="line skew-4"></div>
+          <div className="line skew-5"></div>
         </div>
       </div>
     </div>

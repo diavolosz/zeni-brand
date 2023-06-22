@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 14em;
+    font-size: 20em;
 
 
     .row {
@@ -22,8 +22,8 @@
       justify-content: space-between;
 
       span {
-        height: 200px;
-        width: 150px;
+        height: 280px;
+        width: 180px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,26 +70,51 @@
 
     .turning-piece {
       position: absolute;
-      outline: 2px red solid;
       height: 100vh;
       width: 100vw;
-      transform: rotate(25deg);
-      animation: rotate 3s ease-in-out 0.5s 1 normal forwards;
+      transform: rotate(0deg);
+      animation: rotate 1.75s ease-in-out 0.75s 1 normal forwards;
+
+      .line {
+        position: absolute;
+        border-left: 1.5px solid #a8a8a8ff;
+        transform-origin: left bottom;
+      }
 
       .skew-1 {
-        position: absolute;
-        border-left: 2px solid rgb(21, 0, 255);
-        height: 150vh;
+        height: 75vh;
         left: 50vw;
-        top: 12.5vh;
+        top: -25vh;
+        transform: rotate(50deg);
+
       }
 
       .skew-2 {
-        position: absolute;
-        border-top: 2px solid rgb(21, 0, 255);
-        top: 50vh;
-        width: 50vw;
-        left: 25vw;
+        height: 100vh;
+        left: 50vw;
+        top: -50vh;
+        transform: rotate(235deg);
+      }
+
+      .skew-3 {
+        height: 45vh;
+        left: 50vw;
+        top: 5vh;
+        transform: rotate(30deg);
+      }
+
+      .skew-4 {
+        height: 60vh;
+        left: 50vw;
+        top: -10vh;
+        transform: rotate(245deg);
+      }
+
+      .skew-5 {
+        height: 120vh;
+        left: 50vw;
+        top: -70vh;
+        transform: rotate(285deg);
       }
     }
   }
@@ -97,6 +122,6 @@
 
 @keyframes rotate {
   to {
-    transform: rotate(45deg);
+    transform: rotate(50deg);
   }
 }
