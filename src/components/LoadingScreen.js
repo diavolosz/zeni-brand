@@ -48,14 +48,14 @@ export default function LoadingScreen() {
         .to(".upperSec", {
           delay: 2.25,
           duration: 1.75,
-          y: "100",
+          y: "50",
           opacity: 0,
           ease: "power3"
         }, "sequence-1")
         .to(".lowerSec", {
           delay: 2.25,
           duration: 1.75,
-          y: "-100",
+          y: "-50",
           opacity: 0,
           ease: "power3"
         }, "sequence-1")

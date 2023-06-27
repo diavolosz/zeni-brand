@@ -4,6 +4,7 @@ import LoadingScreen from './components/LoadingScreen';
 import LandingPage from './components/LandingPage';
 import Scrollbar from './components/Scrollbar';
 import { useEffect, useState } from 'react';
+import TopNav from './components/TopNav';
 
 function App() {
 
@@ -23,11 +24,9 @@ function App() {
 
   return (
     <div className={`App ${loading ? "disabled-scroll" : ""}`}>
-
+      <TopNav loading={loading}/>
       <Scrollbar />
-
       {loading ? <LoadingScreen /> : null}
-
 
       <LandingPage />
 

@@ -15,31 +15,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 20em;
+    font-size: 20vw;
 
 
     .row {
       display: flex;
       justify-content: space-between;
+      height: 40vh;
 
       span {
-        height: 280px;
-        width: 180px;
+        width: 12vw;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 300;
         color: #dab391ff;
-      }
-
-      .upper {
-        position: relative;
-        align-items: flex-end;
-        top: 0px;
-      }
-
-      .lower {
-        align-items: flex-start;
       }
     }
   }

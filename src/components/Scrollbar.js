@@ -29,7 +29,7 @@ function Scrollbar() {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setIsScrolling(false);
-      }, 200);
+      }, 300);
     }
 
     window.addEventListener('scroll', handleScrollEnd);

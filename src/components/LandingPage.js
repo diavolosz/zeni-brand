@@ -13,24 +13,24 @@ export default function LandingPage() {
       gsap.from(".cinematic-shot", {
         delay: 3,
         duration: 1,
-        scale: 1.5,
+        scale: 2,
         ease: "power2"
       })
 
       gsap.from(".left", {
         delay: 3,
         duration: 1.5,
-        x: "-300",
+        x: "-100",
         opacity: 0,
-        ease: "power2"
+        ease: "power3"
       })
 
       gsap.from(".right", {
         delay: 3,
-        duration: 1.25,
-        x: "300",
+        duration: 1.5,
+        x: "100",
         opacity: 0,
-        ease: "power1"
+        ease: "power3"
       })
 
     })
