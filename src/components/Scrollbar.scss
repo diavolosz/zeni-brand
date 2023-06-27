@@ -4,7 +4,7 @@
   top: 0;
   height: 100vh;
   width: 5px;
-  background-color: #A7B1AB;
+  background-color: #ede1d8ff;
   /* Adjust the background color as per your preference */
   z-index: 9999;
   /* Ensure the scrollbar appears above other elements */
@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: #515151;
+    background-color: #0e0e0e;
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
     border-radius: 24px;
