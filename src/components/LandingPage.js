@@ -71,7 +71,7 @@ export default function LandingPage() {
           <span>chapter I</span>
         </div>
         <div className="description-1">
-          <span>ZENI values authenticity, mindfulness, and sustainability through embracing individuality through our gender-neutral designs.</span>
+          <span>ZENI values authenticity, mindfulness, and sustainability through embracing individuality with our gender-neutral designs.</span>
         </div>
         <section className="image-display-container">
           <div className="timeline"></div>

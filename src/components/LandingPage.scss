@@ -50,12 +50,12 @@
 
     .description-1 {
       padding-top: 3em;
-      padding-bottom: 4em;
+      padding-bottom: 5em;
       display: flex;
       justify-content: center;
 
       span {
-        width: 30vw;
+        width: 32vw;
       }
     }
 
@@ -68,7 +68,7 @@
       span {
         width: 70vw;
         font-family: 'silk-serif';
-        font-size: 32px;
+        font-size: 56px;
         text-align: center;
 
         i {
@@ -104,7 +104,7 @@
       width: 90vw;
       margin: auto;
       font-family: 'silk-serif';
-      font-size: 54px;
+      font-size: 100px;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.1em;
@@ -119,7 +119,7 @@
 
       .timeline {
         position: absolute;
-        height: 160vh;
+        height: 148vh;
         top: -10vh;
         border-left: 1.5px solid #a5887fff;
       }
@@ -132,8 +132,8 @@
         padding-bottom: 6em;
 
         img {
-          height: 130px;
-          width: 95px;
+          height: 215px;
+          width: 160px;
           object-fit: cover;
         }
       }
@@ -147,8 +147,8 @@
         padding-bottom: 6em;
 
         img {
-          height: 180px;
-          width: 130px;
+          height: 290px;
+          width: 220px;
           object-fit: cover;
         }
       }
@@ -161,15 +161,15 @@
         padding-bottom: 5em;
 
         img {
-          height: 250px;
-          width: 200px;
+          height: 500px;
+          width: 380px;
           object-fit: cover;
         }
       }
     }
 
     .description-2 {
-      padding-bottom: 6em;
+      padding: 6em;
       display: flex;
       justify-content: center;
 
@@ -183,7 +183,7 @@
       width: 90vw;
       margin: auto;
       font-family: 'silk-serif';
-      font-size: 54px;
+      font-size: 100px;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.1em;
@@ -199,7 +199,7 @@
       span {
         width: 75vw;
         font-family: 'silk-serif';
-        font-size: 24px;
+        font-size: 40px;
         text-align: center;
         font-weight: 300;
       }
@@ -216,7 +216,7 @@
 .small-des {
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
-  font-size: 8px;
+  font-size: 14px;
+  line-height: 16px;  
   text-align: center;
-  line-height: 9px;
 }
