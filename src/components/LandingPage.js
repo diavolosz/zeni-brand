@@ -49,32 +49,66 @@ export default function LandingPage() {
 
 
       <section className="block-wrapper block-1">
-
         <div className="description-1 small-des">
           <span>ZENI aims to bring a sense of calm and tranquility to the wearer, allowing them to embrace their individuality and express with grace and poise</span>
         </div>
 
         <div className="description-2">
           <span>
-          Serenity of Style - we strive to create a <i>peaceful</i> and <i>elegant</i> experience, allowing our customers to connect with their <i>inner serenity</i> while making a positive impact on the world around them
+            Serenity of Style - we strive to create a <i>peaceful</i> and <i>elegant</i> experience, allowing our customers to connect with their <i>inner serenity</i> while making a positive impact on the world around them
           </span>
         </div>
 
         <div className="description-3 small-des">
           <span>scroll down to learn more about all of our mission & team</span>
         </div>
+      </section>
+
+
+
+      <section className="block-wrapper block-2">
+        <div className="chapter small-des">
+          <span>chapter I</span>
+        </div>
+        <div className="description-1">
+          <span>ZENI values authenticity, mindfulness, and sustainability through embracing individuality through our gender-neutral designs.</span>
+        </div>
+        <section className="image-display-container">
+          <div className="timeline"></div>
+          <div className="row-1">
+            <img src="img/models/F5.png"></img>
+            <img src="img/models/M3.png"></img>
+            <img src="img/models/M2.png"></img>
+            <img src="img/models/F3.png"></img>
+            <img src="img/models/F4.png"></img>
+          </div>
+          <div className="row-2">
+            <img src="img/models/M5.png"></img>
+            <img src="img/models/F1.png"></img>
+            <img src="img/models/F6.png"></img>
+          </div>
+          <div className="row-3">
+            <img src="img/models/G1.png"></img>
+          </div>
+        </section>
+
+        <div className="description-2 small-des">
+          <span>We prioritize the well-being of our customers and the environment by using high-quality materials, promoting ethical production practices, and fostering a sense of harmony in everything we do</span>
+        </div>
+
+        <div className="description-3">
+          <span>We believe in the power of embracing one's true self and expressing individuality through our gender-neutral, timeless designs.</span>
+        </div>
+
+        <div className="description-4">
+          <span>ZENI prioritize the <i>well-being</i> of our customers and the environment by using high-quality materials, promoting <i>ethical</i> production practices, and fostering a sense of <i>harmony</i> in everything we do</span>
+        </div>
 
       </section>
 
 
 
-      {/* <section className="block-wrapper block-2">
-        this is block 2
-      </section>
-
-
-
-      <section className="block-wrapper block-3">
+      {/* <section className="block-wrapper block-3">
         this is block 3
       </section> */}
     </div>
