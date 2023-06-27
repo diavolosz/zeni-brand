@@ -2,11 +2,10 @@
   position: fixed;
   font-family: 'Work Sans', sans-serif;
   color: #d7c4b8ff;
-  // height: 100%;
   z-index: 1000;
   // opacity: 0;
   // animation: navTranslateDown 1s ease-in-out 3s forwards;
-
+  
   .top-nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,7 +15,7 @@
 
     .ourwork-button {
       width: 20%;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
 
     .name {
@@ -31,7 +30,7 @@
 
     .nav-selection-wrapper {
       width: 20%;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       display: flex;
       justify-content: space-around;
     }

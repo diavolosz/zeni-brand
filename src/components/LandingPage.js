@@ -108,8 +108,33 @@ export default function LandingPage() {
 
 
 
+      <section className="block-wrapper block-3">
+        <div className="chapter small-des">
+          <span>chapter II</span>
+        </div>
+
+        <div className="section-title">
+          <span>our expertise</span>
+        </div>
+
+        <div className="expertise-list-container">
+          <span className="item-7">Tranquil Styling</span>
+          <span className="item-4">Capsule Wardrobe Creation</span>
+          <span className="item-2">Sustainable Fashion</span>
+          <span className="item-5">Mindfulness Workshops</span>
+          <span className="item-3">Personal Styling Consultations</span>
+          <span className="item-1">Gender-Neutral Design</span>
+          <span className="item-6">Production Consultancy</span>
+        </div>
+
+        <div className="image-container">
+          <img className="plant" src="img/N1.png"></img>
+          <img className="group" src="img/models/G2.png"></img>
+        </div>
+      </section>
+
       {/* <section className="block-wrapper block-3">
-        this is block 3
+        this is block 4
       </section> */}
     </div>
   )

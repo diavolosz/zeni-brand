@@ -121,7 +121,7 @@
         position: absolute;
         height: 148vh;
         top: -10vh;
-        border-left: 1.5px solid #a5887fff;
+        border-left: 1px solid rgba(165, 136, 127, 0.536);
       }
 
       .row-1 {
@@ -138,7 +138,7 @@
         }
       }
 
-      
+
       .row-2 {
         z-index: 10;
         display: flex;
@@ -189,7 +189,7 @@
       line-height: 1.1em;
       padding-bottom: 8em;
     }
-    
+
     .description-4 {
       display: flex;
       justify-content: center;
@@ -208,15 +208,94 @@
 
 
 
-  // .block-3 {
-  //   background-color: rgb(26, 223, 121);
-  // }
+  .block-3 {
+    height: 500vh;
+    background-color: #ede1d8ff;
+    color: #9b8d84;
+
+
+
+    .chapter {
+      padding: 6em 0 10em 0;
+    }
+
+    .section-title {
+      height: 60vh;
+      width: 50vw;
+      margin: auto;
+      font-family: 'silk-serif';
+      font-size: 180px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 140px;
+    }
+
+    .expertise-list-container {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 95vw;
+      font-family: 'silk-serif';
+      font-size: 120px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 110px;
+      padding-bottom: 1em;
+
+      .item-1 {
+        width: 70vw;
+        text-align: end;
+        margin-left: auto;
+      }
+
+      .item-2 {
+        width: 70vw;
+        text-align: end;
+        margin-left: auto;
+      }
+
+      .item-5 {
+        width: 70vw;
+        text-align: start;
+      }
+
+      .item-7 {
+        text-align: start;
+      }
+
+      .item-6 {
+        width: 70vw;
+        text-align: start;
+      }
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      gap: 15px;
+
+      img {
+        width: 47vw;
+        height: 65vh;
+        object-fit: cover;
+        filter: grayscale(0.3);
+      }
+      .group {
+        object-position: 0 60%;
+      }
+
+      .plant {
+        object-position: 0 75%;
+      }
+    }
+  }
 }
 
 .small-des {
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
-  line-height: 16px;  
+  line-height: 16px;
   text-align: center;
 }
