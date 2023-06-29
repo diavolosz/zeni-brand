@@ -112,7 +112,7 @@ export default function LandingPage() {
         <div className="chapter small-des">
           <span>chapter II</span>
         </div>
-
+        <div className="timeline"></div>
         <div className="section-title">
           <span>our expertise</span>
         </div>
@@ -128,8 +128,21 @@ export default function LandingPage() {
         </div>
 
         <div className="image-container">
-          <img className="plant" src="img/N1.png"></img>
           <img className="group" src="img/models/G2.png"></img>
+          <img className="plant" src="img/N3.png"></img>
+        </div>
+
+        <div className="description-1">
+          <span>Committed to creating a <i>peaceful</i> and <i>elegant</i> experience for customers, our team members are dedicated to delivering excellence in every aspect of their work.</span>
+        </div>
+
+        <div className="description-2 small-des">
+          <span>Indulge in the transformative experience of ZENI. Embrace the peace and elegance that our gender-neutral, timeless designs exude. We invite you to elevate your style and radiate serenity. Whether it's a personalized styling consultation, an exploration of sustainable fashion education, or the creation of a versatile capsule wardrobe, our dedicated team is here to guide you on a journey of self-expression and mindful fashion choices.</span>
+          <br/>
+          <br/>
+          <span>
+          Step into the world of ZENI, where elegance meets serenity, and discover the joy of clothing that speaks to your soul.
+          </span>
         </div>
       </section>
 
