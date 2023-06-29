@@ -251,33 +251,110 @@
       text-align: center;
       text-transform: uppercase;
       line-height: 110px;
-      padding-bottom: 1em;
+      padding-bottom: 1.5em;
+
+      .focused {
+        z-index: 11;
+      }
+
+      .item-container {
+        position: relative;
+
+        .item-popup {
+          position: absolute;
+          height: 75vh;
+          width: 60vw;
+          background-color: rgba(56, 30, 17, 0.97);
+          z-index: -1;
+          opacity: 0;
+          // animation: expandDiv 0.5s ease-in-out;
+          // animation-fill-mode: forwards;
+
+          text-transform: uppercase;
+          font-family: 'Work Sans', sans-serif;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: justify;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .item-image-container {
+            display: flex;
+            justify-content: end;
+
+            .item-image {
+              height: 35vh;
+              width: 33vw;
+              padding: 2em;
+              object-fit: cover;
+            }
+          }
+        
+          .item-description {
+            margin: 2.5em auto;
+            width: 55vw;
+          }
+        }
+
+
+        .item-popup-container-1 {
+          top: -50vh;
+        }
+        .item-popup-container-2 {
+          top: -35vh;
+          left: 23%;
+        }
+        .item-popup-container-3 {
+          top: -35vh;
+          left: 10%;
+        }
+        .item-popup-container-4 {
+          top: -35vh;
+        }
+        .item-popup-container-5 {
+          top: -35vh;
+          left: 10%;
+        }
+        .item-popup-container-6 {
+          top: -35vh;
+          left: 10%;
+        }
+        .item-popup-container-7 {
+          top: -35vh;
+          left: 10%;
+        }
+      }
+
 
       .item-1 {
-        width: 70vw;
-        text-align: end;
-        margin-left: auto;
-      }
-
-      .item-2 {
-        width: 70vw;
-        text-align: end;
-        margin-left: auto;
-      }
-
-      .item-5 {
-        width: 70vw;
         text-align: start;
       }
 
-      .item-7 {
+      .item-3 {
+        width: 70vw;
+        text-align: end;
+        margin-left: auto;
+      }
+
+      .item-4 {
+        width: 70vw;
         text-align: start;
       }
 
       .item-6 {
         width: 70vw;
+        text-align: end;
+        margin-left: auto;
+      }
+
+
+      .item-7 {
+        width: 70vw;
         text-align: start;
       }
+
     }
 
     .image-container {
@@ -322,7 +399,7 @@
       width: 28vw;
       margin: auto;
       font-weight: 500;
-      
+
       span {
         color: #716a65;
         line-height: 18px;
@@ -337,4 +414,20 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+}
+
+
+
+@keyframes expandDiv {
+  from {
+    opacity: 0;
+    width: 0;
+    margin-left: 30vw;
+  }
+
+  to {
+    opacity: 1;
+    width: 60vw;
+    margin-left: 0;
+  }
 }
