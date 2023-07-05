@@ -104,10 +104,11 @@
       width: 90vw;
       margin: auto;
       font-family: 'silk-serif';
-      font-size: 100px;
+      font-size: 5.3vw;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.1em;
+      padding-bottom: 6.5em;
     }
 
     .image-display-container {
@@ -119,7 +120,7 @@
 
       .timeline {
         position: absolute;
-        height: 148vh;
+        height: 190vh;
         top: -10vh;
         border-left: 1px solid rgba(165, 136, 127, 0.536);
       }
@@ -183,7 +184,7 @@
       width: 90vw;
       margin: auto;
       font-family: 'silk-serif';
-      font-size: 100px;
+      font-size: 5.3vw;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.1em;
@@ -226,7 +227,7 @@
     .timeline {
       position: absolute;
       height: 13vh;
-      top: 12vh;
+      top: 16vh;
       border-left: 1px solid #9b8d84;
     }
 
@@ -235,7 +236,7 @@
       width: 50vw;
       margin: auto;
       font-family: 'silk-serif';
-      font-size: 180px;
+      font-size: 10vw;
       text-align: center;
       text-transform: uppercase;
       line-height: 140px;
@@ -247,11 +248,11 @@
       margin: auto;
       width: 95vw;
       font-family: 'silk-serif';
-      font-size: 120px;
+      font-size: 6rem;
       text-align: center;
       text-transform: uppercase;
-      line-height: 110px;
-      padding-bottom: 1.5em;
+      line-height: 5.5rem;
+      padding-bottom: 2em;
 
       .focused {
         z-index: 11;
@@ -262,9 +263,9 @@
 
         .item-popup {
           position: absolute;
-          height: 75vh;
+          height: 80vh;
           width: 60vw;
-          background-color: rgba(56, 30, 17, 0.97);
+          background-color: rgba(56, 30, 17, 0.879);
           z-index: -1;
           opacity: 0;
           // animation: expandDiv 0.5s ease-in-out;
@@ -272,8 +273,8 @@
 
           text-transform: uppercase;
           font-family: 'Work Sans', sans-serif;
-          font-size: 14px;
-          line-height: 16px;
+          font-size: 12%;
+          line-height: 140%;
           text-align: justify;
 
           display: flex;
@@ -291,7 +292,7 @@
               object-fit: cover;
             }
           }
-        
+
           .item-description {
             margin: 2.5em auto;
             width: 55vw;
@@ -302,25 +303,31 @@
         .item-popup-container-1 {
           top: -50vh;
         }
+
         .item-popup-container-2 {
           top: -35vh;
           left: 23%;
         }
+
         .item-popup-container-3 {
           top: -35vh;
           left: 10%;
         }
+
         .item-popup-container-4 {
           top: -35vh;
         }
+
         .item-popup-container-5 {
           top: -35vh;
           left: 10%;
         }
+
         .item-popup-container-6 {
           top: -35vh;
           left: 10%;
         }
+
         .item-popup-container-7 {
           top: -35vh;
           left: 10%;
@@ -405,6 +412,51 @@
         line-height: 18px;
       }
     }
+  }
+
+  .block-4 {
+
+    .intro-container {
+      height: 45vh;
+      background-color: #a5887fff;
+      color: #1d110eb8;
+
+      .chapter {
+        padding: 6em 0 4em 0;
+      }
+
+      .creator {
+        font-size: 8vw;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "silk-serif";
+      }
+    }
+
+    .author-container {
+      height: 100vh;
+      background-color: rgb(73, 45, 31);
+      color: rgb(159, 140, 128); 
+
+      .description-1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1em 0 8em 0;
+
+        span {
+          width: 40vw;
+          font-family: "silk-serif";
+          font-size: 36px;
+          text-align: center;
+          font-weight: 100;
+        }
+      }
+    }
+
+
   }
 }
 

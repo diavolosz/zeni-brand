@@ -56,7 +56,7 @@ export default function LandingPage() {
         x: "30vw",
         y: "-5vh"
       }, {
-        duration: 0.75,
+        duration: 0.6,
         opacity: 1,
         width: "60vw",
         x: "0vw",
@@ -223,7 +223,6 @@ export default function LandingPage() {
 
             </div>
           ))}
-
         </div>
 
         <div className="image-container">
@@ -245,9 +244,57 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* <section className="block-wrapper block-3">
-        this is block 4
-      </section> */}
+      <section className="block-wrapper block-4">
+        <div className="intro-container">
+          <div className="chapter small-des">
+            <span>chapter III</span>
+          </div>
+          <div className="creator">
+            <span>Michael Le Duong</span>
+          </div>
+        </div>
+
+        <div className="author-container">
+          <div className="description-1">
+            <span>The founder and creator <i>of</i> </span>
+            <span>ZENI Group</span>
+          </div>
+
+          <img></img>
+
+          <div className="description-2">
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <section className="block-wrapper block-5">
+        <div className="timeline"></div>
+        <div className="chapter small-des">
+          <span>chapter IV</span>
+        </div>
+        <div className="description-1">
+          meet the team
+        </div>
+
+        <div className="team-container">
+          <div>
+            <img className="profile-pic"></img>
+            <span className="member-name"></span>
+            <span className="member-description"></span>
+          </div>
+
+          <div>
+            <img className="profile-pic"></img>
+            <span className="member-name"></span>
+            <span className="member-description"></span>
+          </div>
+        </div>
+
+
+      </section>
     </div>
   )
 }
