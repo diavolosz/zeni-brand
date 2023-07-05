@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import LoadingScreen from './components/LoadingScreen';
-import LandingPage from './components/LandingPage';
+import AboutPage from './components/AboutPage';
 import Scrollbar from './components/Scrollbar';
 import { useEffect, useState } from 'react';
 import TopNav from './components/TopNav';
@@ -28,7 +28,7 @@ function App() {
       <Scrollbar />
       {loading ? <LoadingScreen /> : null}
 
-      <LandingPage />
+      <AboutPage />
 
     </div>
   );
