@@ -5,6 +5,7 @@ import AboutPage from './components/AboutPage';
 import Scrollbar from './components/Scrollbar';
 import { useEffect, useState } from 'react';
 import TopNav from './components/TopNav';
+import LandingPage from './components/LandingPage';
 
 function App() {
 
@@ -24,11 +25,12 @@ function App() {
 
   return (
     <div className={`App ${loading ? "disabled-scroll" : ""}`}>
-      <TopNav loading={loading}/>
-      <Scrollbar />
-      {loading ? <LoadingScreen /> : null}
+      {/* <TopNav loading={loading}/> */}
+      {/* <Scrollbar /> */}
+      {/* {loading ? <LoadingScreen /> : null} */}
+      <LandingPage />
 
-      <AboutPage />
+      {/* <AboutPage /> */}
 
     </div>
   );
