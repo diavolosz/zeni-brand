@@ -23,12 +23,12 @@
       scale: 1;
     }
 
-    div {
+    .about-us {
       position: absolute;
+      height: 100vh;
       width: 100vw;
-      margin: auto;
-      top: 47%;
-      left: 2%;
+      display: flex;
+      align-items: flex-end;
 
       span {
         position: absolute;
@@ -100,7 +100,6 @@
     }
 
     .description-1 {
-      height: 65vh;
       width: 90vw;
       margin: auto;
       font-family: 'silk-serif';
@@ -108,7 +107,7 @@
       text-align: center;
       text-transform: uppercase;
       line-height: 1.1em;
-      padding-bottom: 6.5em;
+      padding-bottom: 1em;
     }
 
     .image-display-container {
@@ -226,8 +225,8 @@
 
     .timeline {
       position: absolute;
-      height: 3%;
-      top: 4%;
+      height: 7em;
+      top: 8em;
       border-left: 1px solid #9b8d84;
     }
 
@@ -239,7 +238,7 @@
       font-size: 10vw;
       text-align: center;
       text-transform: uppercase;
-      line-height: 140px;
+      line-height: 0.75em;
     }
 
     .expertise-list-container {
@@ -263,7 +262,7 @@
 
         .item-popup {
           position: absolute;
-          height: 750px;
+          height: 48em;
           width: 500px;
           background-color: rgba(56, 30, 17, 0.879);
           z-index: -1;
@@ -283,7 +282,7 @@
 
           .item-image-container {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
 
             .item-image {
               height: 35vh;

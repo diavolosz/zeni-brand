@@ -25,12 +25,12 @@ function App() {
 
   return (
     <div className={`App ${loading ? "disabled-scroll" : ""}`}>
-      {/* <TopNav loading={loading}/> */}
-      {/* <Scrollbar /> */}
-      {/* {loading ? <LoadingScreen /> : null} */}
-      <LandingPage />
+      <TopNav loading={loading}/>
+      <Scrollbar />
+      {loading ? <LoadingScreen /> : null}
+      {/* <LandingPage /> */}
 
-      {/* <AboutPage /> */}
+      <AboutPage />
 
     </div>
   );
