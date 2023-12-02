@@ -14,7 +14,7 @@ export default function TopNav(props) {
       gsap.from(".top-nav-container", {
         delay: 3,
         duration: 1,
-        y: "-50",
+        y: "-70",
         opacity: 0
       })
     })

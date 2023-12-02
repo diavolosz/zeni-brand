@@ -53,13 +53,13 @@ export default function AboutPage() {
       gsap.fromTo(divRef.current, {
         opacity: 0,
         width: "0px",
-        x: "15vw",
+        x: "27.5em",
         y: "-5vh"
       }, {
         duration: 0.6,
         opacity: 1,
         width: "55em",
-        x: "0vw",
+        x: "0em",
         y: "0px",
         ease: "power3"
       });
@@ -250,7 +250,7 @@ export default function AboutPage() {
             <span>chapter III</span>
           </div>
           <div className="creator">
-            <span>Michael Le Duong</span>
+            <span>Michael Martins</span>
           </div>
         </div>
 
@@ -263,7 +263,9 @@ export default function AboutPage() {
           <img></img>
 
           <div className="description-2">
-
+            <span>
+              Meet Michael Martins, the creative force steering ZENI towards timeless elegance and serenity. Armed with a degree in <i>Sustainable Fashion</i> and a wealth of hands-on experience, Michael seamlessly blends design expertise with a commitment to eco-conscious practices. His passion for <i>gender-neutral</i> fashion and sustainability defines ZENI's ethos, where each garment is a statement of authenticity and mindfulness. Join us on a journey where style meets serenity, guided by Michael's vision for a <i>harmonious</i> fusion of fashion and consciousness.
+            </span>
           </div>
         </div>
 
