@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   const divData = [
     {
-      content: 'Tranquil Styling',
+      content: 'Tranquil Styling Focus',
       spanContent: 'At ZENI, we understand that ambiance plays a significant role in creating memorable events. Our expertise in event styling allows us to curate serene and elegant atmospheres that reflect our brand\'s values of peace and elegance. From intimate gatherings to grand celebrations, we meticulously design'
     },
     {
@@ -53,12 +53,12 @@ export default function AboutPage() {
       gsap.fromTo(divRef.current, {
         opacity: 0,
         width: "0px",
-        x: "30vw",
+        x: "15vw",
         y: "-5vh"
       }, {
         duration: 0.6,
         opacity: 1,
-        width: "60vw",
+        width: "55em",
         x: "0vw",
         y: "0px",
         ease: "power3"
@@ -68,7 +68,7 @@ export default function AboutPage() {
         opacity: 0,
         y: "25px",
         duration: 0.5,
-        delay: 0.35
+        delay: 0.50
       })
 
       gsap.from(imgRef.current, {
