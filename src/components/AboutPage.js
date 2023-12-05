@@ -260,11 +260,11 @@ export default function AboutPage() {
             <span>ZENI Group</span>
           </div>
 
-          <img></img>
+          <img src="img/models/creator.png" alt="creator"></img>
 
           <div className="description-2">
             <span>
-              Meet Michael Martins, the creative force steering ZENI towards timeless elegance and serenity. Armed with a degree in <i>Sustainable Fashion</i> and a wealth of hands-on experience, Michael seamlessly blends design expertise with a commitment to eco-conscious practices. His passion for <i>gender-neutral</i> fashion and sustainability defines ZENI's ethos, where each garment is a statement of authenticity and mindfulness. Join us on a journey where style meets serenity, guided by Michael's vision for a <i>harmonious</i> fusion of fashion and consciousness.
+              Meet Michael Martins, the creative force steering ZENI towards timeless elegance and serenity. Armed with a degree in <i>Sustainable Fashion</i> and a wealth of hands-on experience, Michael seamlessly blends design expertise with a commitment to eco-conscious practices. His passion for <i>gender-neutral</i> fashion and sustainability defines ZENI's ethos, where each garment is a statement of authenticity and mindfulness.
             </span>
           </div>
         </div>
@@ -276,9 +276,11 @@ export default function AboutPage() {
         <div className="timeline"></div>
         <div className="chapter small-des">
           <span>chapter IV</span>
+          <span>THE TEAM</span>
         </div>
         <div className="description-1">
-          meet the team
+          <span>Meet</span>
+          <span>the team</span>
         </div>
 
         <div className="team-container">

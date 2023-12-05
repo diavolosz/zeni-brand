@@ -68,7 +68,7 @@
       span {
         width: 70vw;
         font-family: 'silk-serif';
-        font-size: 56px;
+        font-size: 2.8vw;
         text-align: center;
 
         i {
@@ -227,7 +227,7 @@
 
     .timeline {
       position: absolute;
-      height: 6vw;
+      height: 5.5vw;
       top: 6vw;
       border-left: 1px solid #9b8d84;
     }
@@ -409,7 +409,7 @@
       span {
         width: 80vw;
         font-family: "silk-serif";
-        font-size: 48px;
+        font-size: 2.5vw;
         text-align: center;
       }
     }
@@ -422,7 +422,7 @@
 
       span {
         color: #716a65;
-        line-height: 18px;
+        line-height: 0.7vw;
       }
     }
   }
@@ -447,7 +447,10 @@
     }
 
     .author-container {
-      height: 100vh;
+      // height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: rgb(73, 45, 31);
       color: rgb(159, 140, 128); 
 
@@ -458,6 +461,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         padding: 1vw 0 8vw 0;
+        margin-bottom: 5vw;
 
         span {
           width: 40vw;
@@ -487,7 +491,44 @@
       }
     }
 
+    img {
+      height: 37vw;
+      width: 45vw;
+      object-fit: cover;
+      object-position: bottom;
+      margin-bottom: 4vw;
+    }
 
+  }
+
+  .block-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .timeline {
+      position: absolute;
+      height: 26%;
+      top: 18vh;
+      border-left: 1px solid rgba(0, 0, 0, 0.536);
+    }
+
+    .chapter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5vw 0 12vw;
+    }
+    .description-1 {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 8vw;
+      font-family: "silk-serif";
+      line-height: 6.5vw;
+    }
   }
 }
 
@@ -495,7 +536,7 @@
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
   font-size: 0.7vw;
-  line-height: 16px;
+  line-height: 0.7vw;
   text-align: center;
 }
 
