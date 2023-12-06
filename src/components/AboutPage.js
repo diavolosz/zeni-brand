@@ -283,17 +283,17 @@ export default function AboutPage() {
           <span>the team</span>
         </div>
 
-        <div className="team-container">
-          <div>
-            <img className="profile-pic"></img>
-            <span className="member-name"></span>
-            <span className="member-description"></span>
+        <div className="member-container">
+          <div className="member-wrapper">
+            <img className="profile-pic" src="img/models/team1.png"></img>
+            <span className="member-name">Zhang<br/>Wei</span>
+            <span className="member-description">ZENI's meticulous designer, graduated from Beijing Institute of Fashion Technology. With a keen eye for sustainable fashion, he has collaborated on acclaimed collections.</span>
           </div>
 
-          <div>
-            <img className="profile-pic"></img>
-            <span className="member-name"></span>
-            <span className="member-description"></span>
+          <div className="member-wrapper">
+            <img className="profile-pic" src="img/models/team2.png"></img>
+            <span className="member-name">Aisha<br/>Malik</span>
+            <span className="member-description">ZENI's sustainability advocate, holds a degree in Environmental Science from Kuala Lumpur University. She intertwines her passion for fashion and sustainability to craft designs that resonate with eco-conscious values, enriching ZENI's commitment to a harmonious and mindful approach.</span>
           </div>
         </div>
 

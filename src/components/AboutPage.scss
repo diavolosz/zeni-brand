@@ -430,9 +430,9 @@
   .block-4 {
 
     .intro-container {
-      height: 45vh;
       background-color: #a5887fff;
       color: #1d110eb8;
+      padding-bottom: 6em;
 
       .chapter {
         padding: 6em 0 4em 0;
@@ -451,7 +451,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: rgb(73, 45, 31);
+      background-color: rgb(54, 32, 21);
       color: rgb(159, 140, 128); 
 
       .description-1 {
@@ -506,12 +506,14 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    background-color: #1D110E;
+    color: #8c7b70ff;
 
     .timeline {
       position: absolute;
-      height: 26%;
+      height: 14%;
       top: 18vh;
-      border-left: 1px solid rgba(0, 0, 0, 0.536);
+      border-left: 1px solid #8c7b70ff;
     }
 
     .chapter {
@@ -528,6 +530,42 @@
       font-size: 8vw;
       font-family: "silk-serif";
       line-height: 6.5vw;
+      margin-bottom: 15vh;
+    }
+
+    .member-container {
+      display: flex;
+      justify-content: space-between;
+      width: 63%;
+    }
+
+    .member-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+      text-transform: uppercase;
+
+      .profile-pic {
+        height: 30vw;
+        width: 25vw;
+        object-fit: cover;
+      }
+
+      .member-name {
+        text-align: center;
+        margin: 5vh 0;
+        font-family: "silk-serif";
+        font-size: 1.8vw;
+        font-weight: 100;
+      }
+
+      .member-description {
+        text-align: center;
+        margin-bottom: 40vh;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.7vw;
+        line-height: 0.8vw;
+      }
     }
   }
 }
