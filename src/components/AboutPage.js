@@ -2,8 +2,10 @@
 
 import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./AboutPage.scss"
 
+gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutPage() {
 
@@ -114,6 +116,12 @@ export default function AboutPage() {
         ease: "power3"
       })
 
+      // gsap.from(".block-2-chapter", {
+      //   scrollTrigger: ".block-2-chapter",
+      //   y: "-100",
+      //   ease: "power3"
+      // })
+
     })
     return () => ctx.revert();
   }, [])
@@ -121,7 +129,7 @@ export default function AboutPage() {
   return (
     <div className="page-container">
       <div className="image-wrapper">
-        <img className="cinematic-shot" src="img/cinematic-shot.png" alt="landing-page-shot"></img>
+        <img className="cinematic-shot" src="img/cinematic-shot2.png" alt="landing-page-shot"></img>
         <div className="about-us">
           <span className="left">About</span> <span className="right">Us</span>
         </div>
@@ -148,7 +156,7 @@ export default function AboutPage() {
 
 
       <section className="block-wrapper block-2">
-        <div className="chapter small-des">
+        <div className="chapter small-des block-2-chapter">
           <span>chapter I</span>
         </div>
         <div className="description-1">
@@ -213,7 +221,7 @@ export default function AboutPage() {
                 {activeIndex === index &&
                   <div ref={divRef} className={`item-popup item-popup-container-${index + 1}`}>
                     <div className="item-image-container">
-                      <img ref={imgRef} className="item-image" src="img/N3.png"></img>
+                      <img ref={imgRef} className="item-image" src={`img/expertise/e${index + 1}.png`} alt={`img/expertise/e${index + 1}.png`}></img>
                     </div>
                     <div ref={descriptionRef} className="item-description">{item.spanContent}</div>
                   </div>

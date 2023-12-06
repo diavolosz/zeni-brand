@@ -34,8 +34,12 @@
         position: absolute;
         font-size: 26vw;
         font-family: 'silk-serif';
-        color: #d7c4b8ff;
+        color: rgba(215, 196, 184, 0.829);
         opacity: 1;
+      }
+
+      .left {
+        left: 1.5vw;
       }
 
       .right {
@@ -511,7 +515,7 @@
 
     .timeline {
       position: absolute;
-      height: 14%;
+      height: 8%;
       top: 18vh;
       border-left: 1px solid #8c7b70ff;
     }
