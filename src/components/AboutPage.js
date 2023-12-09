@@ -3,9 +3,12 @@
 import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
 import "./AboutPage.scss"
 
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollSmoother)
 
 export default function AboutPage() {
 
@@ -91,7 +94,10 @@ export default function AboutPage() {
 
 
   useEffect(() => {
-
+    ScrollSmoother.create({
+      content: "#about-smooth-content",
+      smooth: 3,
+    });
     let ctx = gsap.context(() => {
       gsap.from(".cinematic-shot", {
         delay: 3,
@@ -117,7 +123,11 @@ export default function AboutPage() {
       })
 
       // gsap.from(".block-2-chapter", {
-      //   scrollTrigger: ".block-2-chapter",
+      //   scrollTrigger: {
+      //     trigger: ".block-2-chapter",
+      //     markers: true,
+      //     start: "20vh"
+      //   },
       //   y: "-100",
       //   ease: "power3"
       // })
@@ -127,7 +137,7 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="page-container">
+    <div id="about-smooth-content" className="page-container">
       <div className="image-wrapper">
         <img className="cinematic-shot" src="img/cinematic-shot2.png" alt="landing-page-shot"></img>
         <div className="about-us">
