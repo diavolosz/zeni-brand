@@ -162,8 +162,8 @@ export default function AboutPage() {
         <div className="description-1">
           <span>ZENI values authenticity, mindfulness, and sustainability through embracing individuality with our gender-neutral designs.</span>
         </div>
-        <section className="image-display-container">
           <div className="timeline"></div>
+        <section className="image-display-container">
           <div className="row-1">
             <img src="img/models/F5.png"></img>
             <img src="img/models/M3.png"></img>

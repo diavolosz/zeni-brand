@@ -15,10 +15,10 @@ function App() {
   useEffect(() => {
     setTimeout(function () {
       window.scrollTo(0, 0);
-    }, 400);
+    }, 100);
     setTimeout(function() {
       body.classList.add('disabled-scroll')
-    }, 600)
+    }, 200)
     setTimeout(() => {
       setLoading(false)
       body.classList.remove('disabled-scroll')
