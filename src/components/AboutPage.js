@@ -4,9 +4,12 @@ import { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollToPlugin } from "gsap/all";
+
 
 import "./AboutPage.scss"
 
+gsap.registerPlugin(ScrollToPlugin)
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(ScrollSmoother)
 
@@ -94,6 +97,8 @@ export default function AboutPage() {
 
 
   useEffect(() => {
+    gsap.to(window, { duration: 1, scrollTo:0 });
+    
     ScrollSmoother.create({
       content: "#about-smooth-content",
       smooth: 3,

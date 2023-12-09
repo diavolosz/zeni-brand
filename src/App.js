@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import { useEffect, useState } from 'react';
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
 
@@ -21,12 +22,9 @@ function App() {
   let body = document.querySelector('body')
 
   useEffect(() => {
-    setTimeout(function () {
-      window.scrollTo(0, 0);
-    }, 100);
     setTimeout(function() {
       body.classList.add('disabled-scroll')
-    }, 200)
+    }, 1200)
     setTimeout(() => {
       setLoading(false)
       body.classList.remove('disabled-scroll')
