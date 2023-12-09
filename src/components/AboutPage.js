@@ -97,7 +97,7 @@ export default function AboutPage() {
 
 
   useEffect(() => {
-    gsap.to(window, { duration: 1, scrollTo:0 });
+    // gsap.to(window, { duration: 1, scrollTo:0 });
     
     ScrollSmoother.create({
       content: "#about-smooth-content",

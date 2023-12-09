@@ -3,6 +3,7 @@ import './App.scss';
 import { useEffect, useState } from 'react';
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from "gsap/all";
 import gsap from 'gsap';
 
 
@@ -13,6 +14,7 @@ import TopNav from './components/TopNav';
 import LandingPage from './components/LandingPage';
 
 gsap.registerPlugin(ScrollSmoother)
+gsap.registerPlugin(ScrollToPlugin)
 
 function App() {
 
@@ -22,9 +24,11 @@ function App() {
   let body = document.querySelector('body')
 
   useEffect(() => {
+    gsap.to(window, { duration: 0.5, scrollTo:0 });
+
     setTimeout(function() {
       body.classList.add('disabled-scroll')
-    }, 1200)
+    }, 700)
     setTimeout(() => {
       setLoading(false)
       body.classList.remove('disabled-scroll')
