@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollSmoother)
 
 export default function AboutPage() {
 
-  const [activeIndex, setActiveIndex] = useState(null);
 
   const divData = [
     {
@@ -49,60 +48,74 @@ export default function AboutPage() {
   ];
 
 
-  const divRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const imgRef = useRef(null);
+
+  useEffect(() => {    
+    ScrollSmoother.create({
+      content: "#about-smooth-content",
+      smooth: 2,
+    });
+
+    let expertisesArr = document.querySelectorAll(".item-container")
 
 
-  const handleMouseEnter = (index) => {
-    setActiveIndex(index);
-
-    setTimeout(() => {
-      gsap.fromTo(divRef.current, {
+    expertisesArr.forEach(function(eachExpertise){
+      const tl = gsap
+      .timeline({paused: true})
+      // .fromTo(eachExpertise.querySelector('.content-container'), {
+      //   zIndex: 0     
+      // }, {
+      //   zIndex: 7,
+      //   duration: 0.5
+      // })
+      .fromTo(eachExpertise.querySelector('.item-popup'), {
         opacity: 0,
-        width: "0px",
-        x: "27.5em",
-        y: "-5vh"
+        height: "0em",
+        // width: "0em",
+        scaleX: 0,
+        // left: "27.5em"        
       }, {
         duration: 0.6,
         opacity: 1,
-        width: "55em",
-        x: "0em",
-        y: "0px",
-        ease: "power3"
-      });
-
-      gsap.from(descriptionRef.current, {
-        opacity: 0,
-        y: "25px",
-        duration: 0.5,
-        delay: 0.50
-      })
-
-      gsap.from(imgRef.current, {
+        height: "fit-content",
+        // width: "55em",
+        scaleX: 1,
+        transformOrigin: "50 0",
+        ease: "power3",
+      }, 0)
+      .fromTo(eachExpertise.querySelector('.item-image'), {
         opacity: 0,
         y: "-25px",
+      }, {
+        opacity: 1,
+        y: "0px",
         duration: 0.5,
-        delay: 0.45
-      })
-    }, 100)
-
-  };
-
-  const handleMouseLeave = () => {
-    setActiveIndex(null);
-  };
-
-
+      }, "-=0.3")
+      .fromTo(eachExpertise.querySelector('.item-description'), {
+        opacity: 0,
+        y: "25px",
+      },{
+        opacity: 1,
+        y: "0px",
+        duration: 0.5,
+      }, "-=0.3")
 
 
-  useEffect(() => {
-    // gsap.to(window, { duration: 1, scrollTo:0 });
-    
-    ScrollSmoother.create({
-      content: "#about-smooth-content",
-      smooth: 3,
-    });
+      eachExpertise.querySelector(".content-container").addEventListener("mouseenter", () => {
+        eachExpertise.classList.add('focused')
+        eachExpertise.firstChild.classList.add('focused')
+        tl.play()
+      });
+      eachExpertise.querySelector(".content-container").addEventListener("mouseleave", () => {
+        console.log('left')
+        tl.reverse()
+        eachExpertise.classList.remove('focused')
+        eachExpertise.firstChild.classList.remove('focused')
+      });
+
+    })
+
+
+
     let ctx = gsap.context(() => {
       gsap.from(".cinematic-shot", {
         delay: 3,
@@ -127,15 +140,14 @@ export default function AboutPage() {
         ease: "power3"
       })
 
-      // gsap.from(".block-2-chapter", {
-      //   scrollTrigger: {
-      //     trigger: ".block-2-chapter",
-      //     markers: true,
-      //     start: "20vh"
-      //   },
-      //   y: "-100",
-      //   ease: "power3"
-      // })
+      gsap.from(".block-2-chapter", {
+        scrollTrigger: {
+          trigger: ".block-2-chapter",
+          markers: true,
+        },
+        y: "-100",
+        ease: "power3"
+      })
 
     })
     return () => ctx.revert();
@@ -226,22 +238,18 @@ export default function AboutPage() {
           {divData.map((item, index) => (
             <div
               key={index}
-              className={`item-container item-${index + 1} ${activeIndex === index ? 'focused' : ''}`}
+              className={`item-container item-${index + 1}`}
             >
-              <span
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave()}
-              >
+              <span className="content-container">
                 {item.content}
-                {activeIndex === index &&
-                  <div ref={divRef} className={`item-popup item-popup-container-${index + 1}`}>
-                    <div className="item-image-container">
-                      <img ref={imgRef} className="item-image" src={`img/expertise/e${index + 1}.png`} alt={`img/expertise/e${index + 1}.png`}></img>
-                    </div>
-                    <div ref={descriptionRef} className="item-description">{item.spanContent}</div>
-                  </div>
-                }
               </span>
+
+                <div className={`item-popup item-popup-container-${index + 1}`}>
+                  <div className="item-image-container">
+                    <img className="item-image" src={`img/expertise/e${index + 1}.png`} alt={`img/expertise/e${index + 1}.png`}></img>
+                  </div>
+                  <div className="item-description">{item.spanContent}</div>
+                </div>
 
 
             </div>

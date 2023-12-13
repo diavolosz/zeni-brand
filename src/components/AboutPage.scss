@@ -222,7 +222,6 @@
 
 
   .block-3 {
-    // height: 500vh;
     background-color: #ede1d8ff;
     color: #9b8d84;
     position: relative;
@@ -268,24 +267,29 @@
       line-height: 6vw;
       padding-bottom: 2em;
 
-      .focused {
-        z-index: 11;
-      }
-
+      
       .item-container {
         position: relative;
 
+        .content-container {
+          position: relative;
+
+          &:hover {
+            z-index: 7;
+            color: #d8c2b2 ;
+            transition: 3s;
+          }
+        }
+
         .item-popup {
           position: absolute;
-          height: fit-content;
-          width: 8em;
           background-color: rgba(56, 30, 17, 0.879);
-          z-index: -1;
-          opacity: 0;
+          z-index: 3;
+
+          width: 55em;
 
           top: -16em;
-          // animation: expandDiv 0.5s ease-in-out;
-          // animation-fill-mode: forwards;
+
 
           text-transform: uppercase;
           font-family: 'Work Sans', sans-serif;
