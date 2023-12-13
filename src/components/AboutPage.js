@@ -61,23 +61,14 @@ export default function AboutPage() {
     expertisesArr.forEach(function(eachExpertise){
       const tl = gsap
       .timeline({paused: true})
-      // .fromTo(eachExpertise.querySelector('.content-container'), {
-      //   zIndex: 0     
-      // }, {
-      //   zIndex: 7,
-      //   duration: 0.5
-      // })
       .fromTo(eachExpertise.querySelector('.item-popup'), {
         opacity: 0,
         height: "0em",
-        // width: "0em",
         scaleX: 0,
-        // left: "27.5em"        
       }, {
         duration: 0.6,
         opacity: 1,
         height: "fit-content",
-        // width: "55em",
         scaleX: 1,
         transformOrigin: "50 0",
         ease: "power3",
