@@ -91,6 +91,7 @@ export default function AboutPage() {
       }, "-=0.3")
 
 
+
       eachExpertise.querySelector(".content-container").addEventListener("mouseenter", () => {
         eachExpertise.classList.add('focused')
         eachExpertise.firstChild.classList.add('focused')
@@ -131,15 +132,102 @@ export default function AboutPage() {
         ease: "power3"
       })
 
+      gsap.to(".cinematic-shot", {
+        scrollTrigger: {
+          trigger: ".cinematic-shot",
+          start: "50% 48%",
+          end: "bottom 50%",
+          scrub: true
+        },
+        height: "200%",
+      })
+
       gsap.from(".block-2-chapter", {
         scrollTrigger: {
           trigger: ".block-2-chapter",
-          markers: true,
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          // markers: true,
+          scrub: true
         },
-        y: "-100",
-        ease: "power3"
+        y: "-2vh",
+        ease: "power3",
+        opacity: 0,
       })
 
+      gsap.from(".block-2 .description-1 .split-text", {
+        scrollTrigger: {
+          trigger: ".block-2 .description-1 .split-text",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "500%",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+        x: "-5vw",
+        stagger: 0.1,
+        ease: "power3",
+        opacity: 0,
+        duration: 1.5
+      })
+
+      gsap.from(".image-display-container .image-row", {
+          scrollTrigger: {
+            trigger: ".image-display-container .image-row",
+            start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+            end: "500% 50%",
+            scrub: true,
+            // toggleActions: "play none none reverse",
+            // markers: true,
+          },
+          y: "5vw",
+          stagger: 0.5,
+          ease: "power3",
+          opacity: 0,
+          duration: 1.5
+        })
+
+      gsap.from(".block-2 .timeline", {
+        scrollTrigger: {
+          trigger: ".block-2 .timeline",
+          start: "top 20%", //top of the trigger hit the 50% mark of viewpot 
+          end: "800px top",
+          scrub: true,
+          // markers: true,
+        },
+        height: "0px",
+        ease: "linear",
+        // opacity: 0,
+      })
+
+
+      gsap.from(".block-2 .description-3 .split-text", {
+        scrollTrigger: {
+          trigger: ".block-2 .description-3 .split-text",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "500%",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+        x: "10vw",
+        stagger: 0.15,
+        ease: "power3",
+        opacity: 0,
+        duration: 1.5
+      })
+
+      gsap.from(".item-container ", {
+        scrollTrigger: {
+          trigger: ".item-container ",
+          start: "-30% 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "500%",
+          toggleActions: "play none none reset",
+          markers: true,
+        },
+        x: "5vw",
+        stagger: 0.2,
+        ease: "power3",
+        opacity: 0,  
+        duration: 1.3    
+      })
     })
     return () => ctx.revert();
   }, [])
@@ -178,23 +266,27 @@ export default function AboutPage() {
           <span>chapter I</span>
         </div>
         <div className="description-1">
-          <span>ZENI values authenticity, mindfulness, and sustainability through embracing individuality with our gender-neutral designs.</span>
+          <span className="split-text">ZENI values authenticity,</span>
+          <span className="split-text">mindfulness, and</span>
+          <span className="split-text">sustainability through</span>
+          <span className="split-text">embracing individuality with</span>
+          <span className="split-text">our gender-neutral designs.</span>
         </div>
           <div className="timeline"></div>
         <section className="image-display-container">
-          <div className="row-1">
+          <div className="image-row row-1">
             <img src="img/models/F5.png"></img>
             <img src="img/models/M3.png"></img>
             <img src="img/models/M2.png"></img>
             <img src="img/models/F3.png"></img>
             <img src="img/models/F4.png"></img>
           </div>
-          <div className="row-2">
+          <div className="image-row row-2">
             <img src="img/models/M5.png"></img>
             <img src="img/models/F1.png"></img>
             <img src="img/models/F6.png"></img>
           </div>
-          <div className="row-3">
+          <div className="image-row row-3">
             <img src="img/models/G1.png"></img>
           </div>
         </section>
@@ -204,7 +296,11 @@ export default function AboutPage() {
         </div>
 
         <div className="description-3">
-          <span>We believe in the power of embracing one's true self and expressing individuality through our gender-neutral, timeless designs.</span>
+          <span className="split-text">We believe in the power of</span> 
+          <span className="split-text">embracing one's true self</span> 
+          <span className="split-text">and expressing individuality</span> 
+          <span className="split-text">through our gender-neutral,</span> 
+          <span className="split-text">timeless designs.</span>
         </div>
 
         <div className="description-4">
