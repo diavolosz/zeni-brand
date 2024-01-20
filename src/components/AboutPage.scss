@@ -288,18 +288,11 @@
 
         .content-container {
           position: relative;
-
-          &:hover {
-            z-index: 7;
-            color: #d8c2b2 ;
-            transition: 3s;
-          }
         }
 
         .item-popup {
           position: absolute;
           background-color: rgba(56, 30, 17, 0.879);
-          z-index: 3;
 
           width: 55em;
 
@@ -364,6 +357,10 @@
         .item-popup-container-7 {
           left: 20%;
         }
+      }
+
+      .focused {
+        z-index: 7;
       }
 
 
