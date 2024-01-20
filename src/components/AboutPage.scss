@@ -253,7 +253,7 @@
     .timeline {
       position: absolute;
       height: 5.5vw;
-      top: 6vw;
+      top: 7.5vw;
       border-left: 1px solid #9b8d84;
     }
 
@@ -416,15 +416,22 @@
         height: 65vh;
         object-fit: cover;
       }
+      
+      .image-wrap {
+        overflow: hidden;
+        width: 47vw;
+        position: relative;
 
-      .group {
-        object-position: 0 50%;
-        filter: grayscale(0.2);
+        .group {
+          object-position: 0 50%;
+          filter: grayscale(0.2);
+        }
+  
+        .plant {
+          object-position: 0 70%;
+        }
       }
 
-      .plant {
-        object-position: 0 70%;
-      }
     }
 
     .description-1 {
@@ -444,7 +451,7 @@
 
     .description-2 {
       padding: 10em 0;
-      width: 28vw;
+      width: 35vw;
       margin: auto;
       font-weight: 500;
 
@@ -601,8 +608,8 @@
 .small-des {
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
-  font-size: 0.7vw;
-  line-height: 0.7vw;
+  font-size: 0.9vw;
+  line-height: 1vw;
   text-align: center;
 }
 

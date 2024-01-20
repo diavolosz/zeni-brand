@@ -56,8 +56,6 @@ export default function AboutPage() {
     });
 
     let expertisesArr = document.querySelectorAll(".item-container")
-
-
     expertisesArr.forEach(function(eachExpertise){
       const tl = gsap
       .timeline({paused: true})
@@ -108,6 +106,7 @@ export default function AboutPage() {
 
 
 
+
     let ctx = gsap.context(() => {
       gsap.from(".cinematic-shot", {
         delay: 3,
@@ -115,6 +114,8 @@ export default function AboutPage() {
         scale: 2,
         ease: "power2"
       })
+
+      
 
       gsap.from(".left", {
         delay: 3,
@@ -146,12 +147,85 @@ export default function AboutPage() {
         scrollTrigger: {
           trigger: ".block-2-chapter",
           start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
           // markers: true,
           scrub: true
         },
         y: "-2vh",
         ease: "power3",
         opacity: 0,
+      })
+
+      gsap.from(".block-3-chapter", {
+        scrollTrigger: {
+          trigger: ".block-3-chapter",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
+          // markers: true,
+          scrub: true
+        },
+        y: "-2vh",
+        ease: "power3",
+        opacity: 0,
+      })
+
+      gsap.from(".block-4-chapter", {
+        scrollTrigger: {
+          trigger: ".block-4-chapter",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
+          // markers: true,
+          scrub: true
+        },
+        y: "-2vh",
+        ease: "power3",
+        opacity: 0,
+      })
+
+      gsap.from(".block-5-chapter", {
+        scrollTrigger: {
+          trigger: ".block-5-chapter",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
+          // markers: true,
+          scrub: true
+        },
+        y: "-2vh",
+        ease: "power3",
+        opacity: 0,
+      })
+      
+      gsap.from(".block-2 .timeline", {
+        scrollTrigger: {
+          trigger: ".block-2 .timeline",
+          start: "top 20%", //top of the trigger hit the 50% mark of viewpot 
+          end: "800px top",
+          scrub: true,
+          // markers: true,
+        },
+        height: "0px",
+        ease: "linear",
+        // opacity: 0,
+      })
+      gsap.from(".block-3 .timeline", {
+        scrollTrigger: {
+          trigger: ".block-3-chapter",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
+          scrub: true,
+        },
+        height: "0px",
+        ease: "linear",
+      })
+      gsap.from(".block-5 .timeline", {
+        scrollTrigger: {
+          trigger: ".block-5-chapter",
+          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
+          end: "top 40%",
+          scrub: true,
+        },
+        height: "0px",
+        ease: "linear",
       })
 
       gsap.from(".block-2 .description-1 .split-text", {
@@ -185,32 +259,118 @@ export default function AboutPage() {
           duration: 1.5
         })
 
-      gsap.from(".block-2 .timeline", {
-        scrollTrigger: {
-          trigger: ".block-2 .timeline",
-          start: "top 20%", //top of the trigger hit the 50% mark of viewpot 
-          end: "800px top",
-          scrub: true,
-          // markers: true,
-        },
-        height: "0px",
-        ease: "linear",
-        // opacity: 0,
-      })
 
 
       gsap.from(".block-2 .description-3 .split-text", {
         scrollTrigger: {
           trigger: ".block-2 .description-3 .split-text",
-          start: "top 85%", //top of the trigger hit the 50% mark of viewpot 
-          end: "500%",
-          toggleActions: "play none none reverse",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          end: "bottom 60%",
+          toggleActions: "play none none reset",
           // markers: true,
         },
         x: "10vw",
         stagger: 0.15,
         ease: "power3",
         opacity: 0,
+        duration: 1.5
+      })
+      
+      gsap.from(".block-2 .description-2", {
+        scrollTrigger: {
+          trigger: ".block-2 .description-2",
+          start: "top 95%", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        y: "5vw",
+        opacity: 0,
+        ease: "power3",
+        duration: 1.5
+      })
+
+      gsap.from(".block-3 .description-1", {
+        scrollTrigger: {
+          trigger: ".block-3 .description-1",
+          start: "top 95%", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        y: "3vw",
+        opacity: 0,
+        ease: "power3",
+        duration: 1.5
+      })
+
+      gsap.from(".block-3 .section-title", {
+        scrollTrigger: {
+          trigger: ".block-3 .section-title",
+          start: "top 95%", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        x: "-4vw",
+        opacity: 0,
+        ease: "power3",
+        duration: 1.5
+      })
+
+      gsap.from(".block-4 .creator", {
+        scrollTrigger: {
+          trigger: ".block-4 .creator",
+          start: "top 95%", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        x: "-3vw",
+        opacity: 0,
+        ease: "power3",
+        duration: 1
+      })
+
+      gsap.from(".block-4 .description-1", {
+        scrollTrigger: {
+          trigger: ".block-4 .description-1",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        y: "3vw",
+        opacity: 0,
+        ease: "power3",
+        duration: 1.5
+      })
+
+      gsap.from(".block-4 .description-2 .split-text", {
+        scrollTrigger: {
+          trigger: ".block-4 .description-2 .split-text",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        x: "-5vw",
+        stagger: 0.1,
+        ease: "power3",
+        opacity: 0,
+        duration: 1.5
+      })
+
+      gsap.from(".block-5 .description-1", {
+        scrollTrigger: {
+          trigger: ".block-5 .description-1",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          // end: "bottom 60%",
+          toggleActions: "play none none reset",
+          // markers: true,
+        },
+        y: "3vw",
+        opacity: 0,
+        ease: "power3",
         duration: 1.5
       })
 
@@ -220,7 +380,6 @@ export default function AboutPage() {
           start: "-30% 85%", //top of the trigger hit the 50% mark of viewpot 
           end: "500%",
           toggleActions: "play none none reset",
-          markers: true,
         },
         x: "5vw",
         stagger: 0.2,
@@ -228,6 +387,28 @@ export default function AboutPage() {
         opacity: 0,  
         duration: 1.3    
       })
+
+      gsap.from(".group", {
+        scrollTrigger: {
+          trigger: ".group",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          end: "bottom top",
+          scrub: true
+        },
+        scale: 1.15
+      })
+      gsap.from(".plant", {
+        scrollTrigger: {
+          trigger: ".plant",
+          start: "top bottom", //top of the trigger hit the 50% mark of viewpot 
+          end: "bottom top",
+          scrub: true
+        },
+        scale: 1.15
+      })
+
+
+
     })
     return () => ctx.revert();
   }, [])
@@ -312,7 +493,7 @@ export default function AboutPage() {
 
 
       <section className="block-wrapper block-3">
-        <div className="chapter small-des">
+        <div className="chapter small-des block-3-chapter">
           <span>chapter II</span>
         </div>
         <div className="timeline"></div>
@@ -344,8 +525,12 @@ export default function AboutPage() {
         </div>
 
         <div className="image-container">
-          <img className="group" src="img/models/G2.png"></img>
-          <img className="plant" src="img/N3.png"></img>
+          <div className="image-wrap">
+            <img className="group" src="img/models/G2.png"></img>
+          </div>
+          <div className="image-wrap">
+           <img className="plant" src="img/N3.png"></img>
+          </div>
         </div>
 
         <div className="description-1">
@@ -364,7 +549,7 @@ export default function AboutPage() {
 
       <section className="block-wrapper block-4">
         <div className="intro-container">
-          <div className="chapter small-des">
+          <div className="chapter small-des block-4-chapter">
             <span>chapter III</span>
           </div>
           <div className="creator">
@@ -381,9 +566,11 @@ export default function AboutPage() {
           <img src="img/models/creator.png" alt="creator"></img>
 
           <div className="description-2">
-            <span>
-              Meet Michael Martins, the creative force steering ZENI towards timeless elegance and serenity. Armed with a degree in <i>Sustainable Fashion</i> and a wealth of hands-on experience, Michael seamlessly blends design expertise with a commitment to eco-conscious practices. His passion for <i>gender-neutral</i> fashion and sustainability defines ZENI's ethos, where each garment is a statement of authenticity and mindfulness.
-            </span>
+              <span className="split-text">Meet Michael Martins, the creative force steering ZENI towards timeless elegance and</span>
+              <span className="split-text">serenity. Armed with a degree in <i>Sustainable Fashion</i> and a wealth of hands-on experience,</span>
+              <span className="split-text">Michael seamlessly blends design expertise with a commitment to eco-conscious practices.</span>
+              <span className="split-text">His passion for <i>gender-neutral</i> fashion and sustainability defines ZENI's ethos, where each</span>
+              <span className="split-text">garment is a statement of authenticity and mindfulness.</span>
           </div>
         </div>
 
@@ -392,7 +579,7 @@ export default function AboutPage() {
 
       <section className="block-wrapper block-5">
         <div className="timeline"></div>
-        <div className="chapter small-des">
+        <div className="chapter small-des block-5-chapter">
           <span>chapter IV</span>
           <span>THE TEAM</span>
         </div>
