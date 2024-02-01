@@ -1,22 +1,190 @@
+// $geoPattern: rgba(215, 196, 184, 0.548);
+$geoPattern: #63371886;
+
+
 .landing-page-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  width: 100dvw;
   overflow: hidden;
-  border: 2px red solid;
-  position: relative;
+  background-color: #ede1d8ff;
+  color: #633718e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-
-  .imageContainer {
-    // height: 500px;
-    // width: 500px;
-    width: 180vw;
-    height: 180vw;
-    border: 2px red solid;
+  .scroller-container {
+    height: 70dvh;
+    width: 100dvw;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    top: 15dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    // border: 2px solid green;
+
+    z-index: 9;
+
+    .image-set {
+      white-space: nowrap;
+      padding: 0 10dvw;
+      display: flex;
+      align-items: center;
+      transform: translateX();
+
+      img {
+        // padding: 0.5dvw;
+        object-fit: cover;
+        position: relative;
+        mix-blend-mode: multiply;
+        transition-timing-function: ease-out;
+      }
+
+      .class-1 {
+        height: 57dvh;
+        width: 21dvw;
+      }
+      .class-2 {
+        height: 35dvh;
+        width: 13dvw;
+      }
+      .class-3 {
+        height: 43dvh;
+        width: 12dvw;
+      }
+      .class-4 {
+        height: 33dvh;
+        width: 12dvw;
+      }
+      .class-5 {
+        height: 55dvh;
+        width: 18dvw;
+      }
+      .class-6 {
+        height: 25dvh;
+        width: 10dvw;
+      }
+      .class-7 {
+        height: 16dvh;
+        width: 8dvw;
+      }
+      .class-8 {
+        height: 33dvh;
+        width: 12dvw;
+      }
+      .class-9 {
+        height: 65dvh;
+        width: 25dvw;
+      }
+      .class-10 {
+        height: 45dvh;
+        width: dvw;
+      }
+    }
+  }
+
+  .background-pattern-container {
+    position: relative;
+    top: 20dvh;
+    height: 60dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // color: #d7c4b8ff;
+    z-index: 1;
+
+    .pattern-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.5vw;
+
+      text-transform: uppercase;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.8vw;
+      line-height: 1vw;
+      text-align: center;
+    }
+  }
+
+
+  .geo-pattern {    
+    .top-right {
+      border-left: 1px solid $geoPattern;
+      border-bottom: 1px solid $geoPattern;
+      position: absolute;
+      top: 25dvh;
+      left: 50dvw;
+      height: 25dvh;
+      width: 30dvw;
+    }
+    .bot-right {
+      border-right: 1px solid $geoPattern;
+      border-top: 1px solid $geoPattern;
+      position: absolute;
+      top: calc(50dvh - 1px);
+      left: calc(20dvw + 1px);
+      height: 25dvh;
+      width: 30dvw;
+    }
+    .skew-top-left {
+      border-top: 1px solid $geoPattern;
+      position: absolute;
+      top: calc(50dvh - 1px);
+      left: calc(25dvw + 1px);
+      height: 25dvh;
+      width: 25dvw;
+
+      transform: rotate(35deg);
+      transform-origin: 100% 0%;
+    }
+
+    .skew-top-right-1 {
+      border-top: 1px solid $geoPattern;
+      position: absolute;
+      top: calc(50dvh - 1px);
+      left: calc(20dvw + 1px);
+      height: 25dvh;
+      width: 30dvw;
+
+      transform: rotate(160deg);
+      transform-origin: 100% 0%;
+    }
+
+    .skew-top-right-2 {
+      border-top: 1px solid $geoPattern;
+      position: absolute;
+      top: calc(50dvh - 1px);
+      left: calc(35dvw + 1px);
+      height: 25dvh;
+      width: 15dvw;
+
+      transform: rotate(145deg);
+      transform-origin: 100% 0%;
+    }
+
+    .skew-bot-left {
+      border-top: 1px solid $geoPattern;
+      position: absolute;
+      top: calc(50dvh);
+      left: calc(30dvw);
+      width: 20dvw;
+
+      transform: rotate(-10deg);
+      transform-origin: 100% 0%;
+    }
+
+  }
+
+  .slogan-container {
+    font-family: 'silk-serif';
+    font-size: 1.5vw;
+    height: 15dvh;
+    width: 50dvw;
+    text-align: center;
   }
 
 }

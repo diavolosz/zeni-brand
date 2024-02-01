@@ -4,7 +4,9 @@ import { gsap } from "gsap"
 
 
 
-export default function LoadingScreen() {
+export default function LoadingScreen(props) {
+
+  const {view} = props
 
   const tl = useRef(null)
 
@@ -97,7 +99,12 @@ export default function LoadingScreen() {
       </div>
 
       <div className="center-description">
-        <p>ZENI is a clothing-based creative studio that embodies neutrality, elegance, and peacefulness in each meticulously crafted artworks.</p>
+        {(view === "default" || view === "landing") && 
+          <p>ZENI is a clothing-based creative studio that embodies neutrality, elegance, and peacefulness in each meticulously crafted artworks.</p>
+        }
+        {view === "about" && 
+          <p>A commitment to crafting garments that transcend mere clothing, embodying a serene and timeless aesthetic.</p>
+        }
       </div>
 
       <div className="center-animation">

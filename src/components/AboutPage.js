@@ -13,8 +13,11 @@ gsap.registerPlugin(ScrollToPlugin)
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(ScrollSmoother)
 
-export default function AboutPage() {
 
+
+export default function AboutPage(props) {
+
+  const {loading} = props
 
   const divData = [
     {
@@ -48,13 +51,14 @@ export default function AboutPage() {
   ];
 
 
+  if (!loading) {
+    // ScrollSmoother.create({
+    //   content: "#about-smooth-content",
+    //   smooth: 2,
+    // });
+  }
 
   useEffect(() => {    
-    ScrollSmoother.create({
-      content: "#about-smooth-content",
-      smooth: 2,
-    });
-
     let expertisesArr = document.querySelectorAll(".item-container")
     expertisesArr.forEach(function(eachExpertise){
       const tl = gsap
@@ -108,32 +112,26 @@ export default function AboutPage() {
 
 
     let ctx = gsap.context(() => {
-      gsap.from(".cinematic-shot", {
-        delay: 3,
+      gsap.timeline()
+      .from(".cinematic-shot", {
         duration: 1,
         scale: 2,
-        ease: "power2"
-      })
-
-      
-
-      gsap.from(".left", {
-        delay: 3,
+        ease: "power2",
+        delay: 3.2
+      },0)
+      .from(".left", {
         duration: 1.5,
         x: "-100",
         opacity: 0,
         ease: "power3"
-      })
-
-      gsap.from(".right", {
-        delay: 3,
+      },0)
+      .from(".right", {
         duration: 1.5,
         x: "100",
         opacity: 0,
         ease: "power3"
-      })
-
-      gsap.to(".cinematic-shot", {
+      },0)
+      .to(".cinematic-shot", {
         scrollTrigger: {
           trigger: ".cinematic-shot",
           start: "50% 48%",
@@ -141,7 +139,7 @@ export default function AboutPage() {
           scrub: true
         },
         height: "200%",
-      })
+      },0)
 
       gsap.from(".block-2-chapter", {
         scrollTrigger: {

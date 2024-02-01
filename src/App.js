@@ -21,9 +21,12 @@ function App() {
 
 
   const [loading, setLoading] = useState(true)
+  const [view, setView] = useState('default')
   let body = document.querySelector('body')
 
-  useEffect(() => {
+
+  let showLoading = () => {
+    setLoading(true)
     gsap.to(window, { duration: 0.5, scrollTo:0 });
 
     setTimeout(function() {
@@ -33,17 +36,28 @@ function App() {
       setLoading(false)
       body.classList.remove('disabled-scroll')
     }, 4000)
+  }
 
+  let setViewLoad = (view) => {
+    setView(view)
+    showLoading()
+  }
+
+  useEffect(() => {
+    showLoading()
   }, [])
 
   return (
     <div className={`App ${loading ? "disabled-scroll" : ""}`}>
-      <TopNav loading={loading}/>
+      <TopNav loading={loading} setViewLoad={setViewLoad} view={view}/>
       <Scrollbar />
-      {loading ? <LoadingScreen /> : null}
-      {/* <LandingPage /> */}
 
-      <AboutPage />
+      {loading ? <LoadingScreen view={view}/> : null}
+      {view === 'landing' && <LandingPage view={view}/>}
+      {view === 'default' && <LandingPage view={view}/>}
+      {view === 'about' && <AboutPage loading={loading}/>}
+
+
 
     </div>
   );

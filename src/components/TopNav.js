@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function TopNav(props) {
 
-  const {loading} = props
+  const {loading, setViewLoad, view} = props
 
   const [isScrollingUp, setIsScrollingUp] = useState(false);
 
@@ -39,15 +39,17 @@ export default function TopNav(props) {
   }, []);
 
   return (
-    <nav className={`top-nav-container ${isScrollingUp ? 'hide' : ''} ${loading? '': 'navTransition'}`}>
+    <nav 
+      className={`top-nav-container ${isScrollingUp ? 'hide' : ''} ${loading? '': 'navTransition'}`} 
+      style={{color: `${view === "landing" || view === "default"? '#351d0de0' : '#d7c4b8ff'}`}}>
       <div className="top-nav-wrapper">
         <div className="ourwork-button">
           <span className="underline">OUR WORK</span>
         </div>
-        <span className="name">ZENI</span>
+        <span className="name" onClick={() => {setViewLoad('landing')}}>ZENI</span>
         <div className="nav-selection-wrapper">
-          <span className="underline">ABOUT</span>
-          <span className="underline">PROCESS</span>
+          <span className="underline" onClick={() => {setViewLoad('about')}}>ABOUT</span>
+          <span className="underline" onClick={() => {setViewLoad('process')}}>PROCESS</span>
           <span className="underline">CONTACT</span>
         </div>
       </div >
