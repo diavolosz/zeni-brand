@@ -24,6 +24,7 @@ export default function TopNav(props) {
   useEffect(() => {
     let lastScrollPosition = window.scrollY;
     function handleScroll() {
+      console.log('scrolling')
       const currentScrollPosition = window.scrollY;
       if (currentScrollPosition > lastScrollPosition) {
         setIsScrollingUp(true);

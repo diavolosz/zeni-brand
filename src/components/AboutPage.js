@@ -52,10 +52,10 @@ export default function AboutPage(props) {
 
 
   if (!loading) {
-    // ScrollSmoother.create({
-    //   content: "#about-smooth-content",
-    //   smooth: 2,
-    // });
+    let sm = ScrollSmoother.create({
+      content: "#about-smooth-content",
+      smooth: 2,
+    });
   }
 
   useEffect(() => {    

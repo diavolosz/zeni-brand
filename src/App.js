@@ -23,19 +23,20 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [view, setView] = useState('default')
   let body = document.querySelector('body')
-
+  
 
   let showLoading = () => {
     setLoading(true)
-    gsap.to(window, { duration: 0.5, scrollTo:0 });
-
-    setTimeout(function() {
-      body.classList.add('disabled-scroll')
-    }, 700)
+    body.classList.add('disabled-scroll')
     setTimeout(() => {
       setLoading(false)
       body.classList.remove('disabled-scroll')
+      ScrollSmoother.create({
+        content: ".App",
+        smooth: 2,
+      });
     }, 4000)
+
   }
 
   let setViewLoad = (view) => {
