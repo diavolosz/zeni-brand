@@ -124,13 +124,13 @@ export default function AboutPage(props) {
         x: "-100",
         opacity: 0,
         ease: "power3"
-      },0)
+      },"<")
       .from(".right", {
         duration: 1.5,
         x: "100",
         opacity: 0,
         ease: "power3"
-      },0)
+      },"<")
       .to(".cinematic-shot", {
         scrollTrigger: {
           trigger: ".cinematic-shot",
