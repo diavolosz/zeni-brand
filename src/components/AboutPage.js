@@ -414,7 +414,7 @@ export default function AboutPage(props) {
   return (
     <div id="about-smooth-content" className="page-container">
       <div className="image-wrapper">
-        <img className="cinematic-shot" src="img/cinematic-shot2.png" alt="landing-page-shot"></img>
+        <img className="cinematic-shot" src="img/cinematic-shot2.jpg" alt="landing-page-shot"></img>
         <div className="about-us">
           <span className="left">About</span> <span className="right">Us</span>
         </div>
