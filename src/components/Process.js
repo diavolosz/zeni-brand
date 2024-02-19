@@ -111,6 +111,13 @@ export default function Process(props) {
         .to(".card-2", {
           yPercent: cardYOffset
         })
+        .fromTo(".card-2 .header-wrapper", {
+          opacity: 0,
+          y: 50
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-2 .title", {
           x: 0
         })
@@ -199,6 +206,7 @@ export default function Process(props) {
         </div>
 
         <div className="card-container">
+
           <div className="card card-1">
             <div className="card-title">
               <span className="step">1 step</span>
@@ -215,34 +223,57 @@ export default function Process(props) {
                 </div>
                 <div className="block-2">
                   <span className="header"><i>styling</i></span>
+                  <span className="step-text">1 STEP</span>
                   <div className="desc desc-style">Personalized styling consultations establish deep connections, ensuring garments reflect individuality, confidence, and serenity in everyday life.</div>
                 </div>
               </div>
             </div>
-
           </div>
+
+
           <div className="card card-2">
             <div className="card-title">
               <span className="step">2 step</span>
-              <span className="title">Educate on Sustainability</span>
+              <span className="title">Craft Gender-Neutral Designs</span>
+            </div>
+            <div className="card-desc-1 card-desc-container">
+              <div className="header-wrapper">
+                <div className="header">Craft Gender-</div>
+                <div className="header">Neutral Designs</div>
+              </div>
+              <div className="block-1">
+                <div className="image-container">
+                  <img src="img/process/blk1.jpg" alt="placeholder"></img>
+                </div>
+                <div className="desc desc-style">
+                  Craft gender-neutral designs celebrating authenticity, freedom of expression, elegance, and peace, transcending boundaries with inclusivity and versatility.
+                </div>
+              </div>
             </div>
           </div>
+
+
+
+
           <div className="card card-3">
             <div className="card-title">
               <span className="step">3 step</span>
-              <span className="title">Design Gender-Neutral</span>
+              <span className="title">Curate Capsule Wardrobes</span>
             </div>
           </div>
+
+
+
           <div className="card card-4">
             <div className="card-title">
               <span className="step">4 step</span>
-              <span className="title">Curate Capsule Wardrobes</span>
+              <span className="title">Practice Mindful Fashion</span>
             </div>
           </div>
           <div className="card card-5">
             <div className="card-title">
               <span className="step">5 step</span>
-              <span className="title">Practice Mindful Fashion</span>
+              <span className="title">Educate on Sustainability</span>
             </div>
           </div>
           <div className="card card-6">
