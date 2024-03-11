@@ -83,7 +83,7 @@ export default function Process(props) {
           // markers: true,
           trigger: '.scroll-container',
           start: 'bottom bottom',
-          end: "+=" + (windowWidth * 12),
+          end: "+=" + (windowWidth * 5),
           pin: true,
           scrub: true,
         }
@@ -118,6 +118,13 @@ export default function Process(props) {
           opacity: 1,
           y: 0
         }, "<")
+        .fromTo(".card-2 img", {
+          opacity: 0,
+          y: 50
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-2 .title", {
           x: 0
         })
@@ -128,6 +135,20 @@ export default function Process(props) {
         .to(".card-3", {
           yPercent: cardYOffset
         })
+        .fromTo(".card-3 .header", {
+          opacity: 0,
+          y: 50
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
+        .fromTo(".card-3 img", {
+          opacity: 0,
+          y: 100
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-3 .title", {
           x: 0
         })
@@ -238,8 +259,8 @@ export default function Process(props) {
             </div>
             <div className="card-desc-1 card-desc-container">
               <div className="header-wrapper">
-                <div className="header">Craft Gender-</div>
-                <div className="header">Neutral Designs</div>
+                <div className="header">Craft  <i>Gender-</i></div>
+                <div className="header"><i>Neutral</i> Designs</div>
               </div>
               <div className="block-1">
                 <div className="image-container">
@@ -253,12 +274,30 @@ export default function Process(props) {
           </div>
 
 
-
-
           <div className="card card-3">
             <div className="card-title">
               <span className="step">3 step</span>
-              <span className="title">Curate Capsule Wardrobes</span>
+              <span className="title">Curate Wardrobes Capsule</span>
+            </div>
+
+            <div className="card-desc-3 card-desc-container">
+              <div className="header">Curate Wardrobes</div>
+              <div className="block-1">
+                <div className="left-container">
+                  <span className="header">Capsule</span>
+                  <span className="step-text">3 STEP</span>
+                  <div className="desc-container">
+                    <div className="desc">
+                      Experienced stylists meticulously craft adaptable collections, blending classic garments to promote simplicity, functionality, and mindful consumption.
+                    </div>
+                    <div className="desc right">Each piece reflects individual style and values, ensuring a curated wardrobe resonating with personal expression and ethical choices.
+                    </div>
+                  </div>
+                </div>
+                <div className="right-container">
+                <img src="img/process/blk3.jpg" alt="placeholder"></img>
+                </div>
+              </div>
             </div>
           </div>
 
