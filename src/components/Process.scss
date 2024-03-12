@@ -348,7 +348,7 @@ $accent-text-6: #2A2A2A;
                   width: 70%;
                 }
 
-                .right {
+                .desc-right {
                   margin-left: auto;
                   text-align: right;
                 }
@@ -363,6 +363,7 @@ $accent-text-6: #2A2A2A;
               img {
                 object-fit: cover;
                 height: 90%;
+                width: 100%;
               }
             }
           }
@@ -380,7 +381,77 @@ $accent-text-6: #2A2A2A;
         background-color: $accent-bkg-4;
         color: $accent-text-4;
         top: calc($card-offset + 9dvh);
+
+        .card-desc-4 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          .header {
+            font-family: 'silk-serif';
+            font-size: 9.5dvw;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+            width: 98%;
+          }
+
+          .block-1 {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            width: 95%;
+
+            .right-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 48%;
+
+              .header {
+                font-family: 'silk-serif';
+                font-size: 9.5dvw;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: start;
+                font-style: italic;
+              }
+
+              .desc-container {
+                .desc {
+                  text-transform: uppercase;
+                  font-family: 'Work Sans', sans-serif;
+                  font-size: 1.1dvw;
+                  line-height: 1.4dvw;
+                  width: 85%;
+                }
+
+                .desc-left {
+                  margin-left: auto;
+                  text-align: right;
+                }
+              }
+            }
+
+            .left-container {
+              width: 50%;
+              display: flex;
+              align-items: end;
+
+              img {
+                object-fit: cover;
+                width: 95%;
+              }
+            }
+          }
+        }
       }
+
+
+
+
 
       .card-5 {
         background-color: $accent-bkg-5;

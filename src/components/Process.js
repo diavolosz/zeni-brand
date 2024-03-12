@@ -137,10 +137,10 @@ export default function Process(props) {
         })
         .fromTo(".card-3 .header", {
           opacity: 0,
-          y: 50
+          x: -50
         }, {
           opacity: 1,
-          y: 0
+          x: 0
         }, "<")
         .fromTo(".card-3 img", {
           opacity: 0,
@@ -159,6 +159,20 @@ export default function Process(props) {
         .to(".card-4", {
           yPercent: cardYOffset
         })
+        .fromTo(".card-4 .header", {
+          opacity: 0,
+          x: 50
+        }, {
+          opacity: 1,
+          x: 0
+        }, "<")
+        .fromTo(".card-4 img", {
+          opacity: 0,
+          y: 100
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-4 .title", {
           x: 0
         })
@@ -290,12 +304,12 @@ export default function Process(props) {
                     <div className="desc">
                       Experienced stylists meticulously craft adaptable collections, blending classic garments to promote simplicity, functionality, and mindful consumption.
                     </div>
-                    <div className="desc right">Each piece reflects individual style and values, ensuring a curated wardrobe resonating with personal expression and ethical choices.
+                    <div className="desc desc-right">Each piece reflects individual style and values, ensuring a curated wardrobe resonating with personal expression and ethical choices.
                     </div>
                   </div>
                 </div>
                 <div className="right-container">
-                <img src="img/process/blk3.jpg" alt="placeholder"></img>
+                  <img src="img/process/blk3.jpg" alt="placeholder"></img>
                 </div>
               </div>
             </div>
@@ -308,7 +322,43 @@ export default function Process(props) {
               <span className="step">4 step</span>
               <span className="title">Practice Mindful Fashion</span>
             </div>
+
+            <div className="card-desc-4 card-desc-container">
+              <div className="header">Practice Mindful</div>
+              <div className="block-1">
+                <div className="left-container">
+                  <img src="img/process/blk4.jpg" alt="placeholder"></img>
+                </div>
+
+                <div className="right-container">
+                  <span className="header">Fashion</span>
+                  <span className="step-text">4 STEP</span>
+                  <div className="desc-container">
+                    <div className="desc desc-left">
+                      Embrace mindfulness in fashion with workshops nurturing presence, self-awareness, and intentionality in dressing, fostering holistic well-being.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div className="card card-5">
             <div className="card-title">
               <span className="step">5 step</span>
