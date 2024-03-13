@@ -295,7 +295,7 @@ export default function Process(props) {
             </div>
 
             <div className="card-desc-3 card-desc-container">
-              <div className="header">Curate Wardrobes</div>
+              <div className="header">Curate <i>Wardrobes</i></div>
               <div className="block-1">
                 <div className="left-container">
                   <span className="header">Capsule</span>
@@ -344,27 +344,48 @@ export default function Process(props) {
           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div className="card card-5">
             <div className="card-title">
               <span className="step">5 step</span>
-              <span className="title">Educate on Sustainability</span>
+              <span className="title">Educate Sustainability</span>
+            </div>
+            <div className="card-desc-1 card-desc-container">
+              <div className="header-wrapper">
+                <div className="header head-left">Education on</div>
+                <div className="header head-right"><i>Sustainability</i></div>
+              </div>
+              <div className="block-1">
+                <div className="image-container">
+                  <img src="img/process/blk5.jpg" alt="placeholder"></img>
+                </div>
+                <div className="desc desc-style">
+                  Empower individuals through workshops on sustainable fashion, fostering awareness, conscious choices, and positive environmental impact in the industry.
+                </div>
+              </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div className="card card-6">
             <div className="card-title">
               <span className="step">6 step</span>
