@@ -10,7 +10,7 @@ function Scrollbar() {
   useEffect(() => {
     function handleScroll() {
       const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-      // setScrollPosition(scrollTop);
+      setScrollPosition(scrollTop);
       setScrollHeight(scrollHeight);
       setClientHeight(clientHeight);
       setIsScrolling(true);
