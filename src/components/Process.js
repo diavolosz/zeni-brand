@@ -60,7 +60,6 @@ export default function Process(props) {
             start: "50% 50%",
             end: "bottom 50%",
             scrub: true,
-            markers: true,
           },
           height: "120%",
         }, 0)
@@ -80,7 +79,6 @@ export default function Process(props) {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({
         scrollTrigger: {
-          // markers: true,
           trigger: '.scroll-container',
           start: 'bottom bottom',
           end: "+=" + (windowWidth * 5),
@@ -183,6 +181,20 @@ export default function Process(props) {
         .to(".card-5", {
           yPercent: cardYOffset
         })
+        .fromTo(".card-5 .header", {
+          opacity: 0,
+          x: 50
+        }, {
+          opacity: 1,
+          x: 0
+        }, "<")
+        .fromTo(".card-5 img", {
+          opacity: 0,
+          y: 100
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-5 .title", {
           x: 0
         })
@@ -193,6 +205,20 @@ export default function Process(props) {
         .to(".card-6", {
           yPercent: cardYOffset
         })
+        .fromTo(".card-6 .header", {
+          opacity: 0,
+          x: 50
+        }, {
+          opacity: 1,
+          x: 0
+        }, "<")
+        .fromTo(".card-6 img", {
+          opacity: 0,
+          y: 100
+        }, {
+          opacity: 1,
+          y: 0
+        }, "<")
         .to(".card-6 .title", {
           x: 0
         })
@@ -247,7 +273,6 @@ export default function Process(props) {
               <span className="step">1 step</span>
               <span className="title">identify target styling</span>
             </div>
-
             <div className="card-desc-1 card-desc-container">
               <div className="header">identify target</div>
               <div className="block-1">
@@ -293,7 +318,6 @@ export default function Process(props) {
               <span className="step">3 step</span>
               <span className="title">Curate Wardrobes Capsule</span>
             </div>
-
             <div className="card-desc-3 card-desc-container">
               <div className="header">Curate <i>Wardrobes</i></div>
               <div className="block-1">
@@ -316,20 +340,17 @@ export default function Process(props) {
           </div>
 
 
-
           <div className="card card-4">
             <div className="card-title">
               <span className="step">4 step</span>
               <span className="title">Practice Mindful Fashion</span>
             </div>
-
             <div className="card-desc-4 card-desc-container">
               <div className="header">Practice Mindful</div>
               <div className="block-1">
                 <div className="left-container">
                   <img src="img/process/blk4.jpg" alt="placeholder"></img>
                 </div>
-
                 <div className="right-container">
                   <span className="header">Fashion</span>
                   <span className="step-text">4 STEP</span>
@@ -366,38 +387,26 @@ export default function Process(props) {
           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div className="card card-6">
             <div className="card-title">
               <span className="step">6 step</span>
               <span className="title">Advise Ethical Production</span>
             </div>
+            <div className="card-desc-6 card-desc-container">
+              <div className="header">Advise <i>Ethnical</i></div>
+              <span className="header head-bot">Production</span>
+              <div className="block-1">
+                <img src="img/process/blk6.jpg" alt="placeholder"></img>
+                <div className="desc-container">
+                  <div className="desc">
+                    Experienced stylists meticulously craft adaptable collections, blending classic garments to promote simplicity, functionality, and mindful consumption.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-
       </div>
-
     </div>
-
   )
 }

@@ -454,19 +454,19 @@ export default function AboutPage(props) {
           <div className="timeline"></div>
         <section className="image-display-container">
           <div className="image-row row-1">
-            <img src="img/models/F5.png"></img>
-            <img src="img/models/M3.png"></img>
-            <img src="img/models/M2.png"></img>
-            <img src="img/models/F3.png"></img>
-            <img src="img/models/F4.png"></img>
+            <img src="img/models/F5.jpg"></img>
+            <img src="img/models/M3.jpg"></img>
+            <img src="img/models/M2.jpg"></img>
+            <img src="img/models/F3.jpg"></img>
+            <img src="img/models/F4.jpg"></img>
           </div>
           <div className="image-row row-2">
-            <img src="img/models/M5.png"></img>
-            <img src="img/models/F1.png"></img>
-            <img src="img/models/F6.png"></img>
+            <img src="img/models/M5.jpg"></img>
+            <img src="img/models/F1.jpg"></img>
+            <img src="img/models/F6.jpg"></img>
           </div>
           <div className="image-row row-3">
-            <img src="img/models/G1.png"></img>
+            <img src="img/models/G1.jpg"></img>
           </div>
         </section>
 
@@ -512,7 +512,7 @@ export default function AboutPage(props) {
 
                 <div className={`item-popup item-popup-container-${index + 1}`}>
                   <div className="item-image-container">
-                    <img className="item-image" src={`img/expertise/e${index + 1}.png`} alt={`img/expertise/e${index + 1}.png`}></img>
+                    <img className="item-image" src={`img/expertise/e${index + 1}.jpg`} alt={`img/expertise/e${index + 1}.jpg`}></img>
                   </div>
                   <div className="item-description">{item.spanContent}</div>
                 </div>
@@ -524,10 +524,10 @@ export default function AboutPage(props) {
 
         <div className="image-container">
           <div className="image-wrap">
-            <img className="group" src="img/models/G2.png"></img>
+            <img className="group" src="img/models/G2.jpg"></img>
           </div>
           <div className="image-wrap">
-           <img className="plant" src="img/N3.png"></img>
+           <img className="plant" src="img/N3.jpg"></img>
           </div>
         </div>
 
@@ -561,7 +561,7 @@ export default function AboutPage(props) {
             <span>ZENI Group</span>
           </div>
 
-          <img src="img/models/creator.png" alt="creator"></img>
+          <img src="img/models/creator.jpg" alt="creator"></img>
 
           <div className="description-2">
               <span className="split-text">Meet Michael Martins, the creative force steering ZENI towards timeless elegance and</span>
@@ -588,13 +588,13 @@ export default function AboutPage(props) {
 
         <div className="member-container">
           <div className="member-wrapper">
-            <img className="profile-pic" src="img/models/team1.png"></img>
+            <img className="profile-pic" src="img/models/team1.jpg"></img>
             <span className="member-name">Zhang<br/>Wei</span>
             <span className="member-description">ZENI's meticulous designer, graduated from Beijing Institute of Fashion Technology. With a keen eye for sustainable fashion, he has collaborated on acclaimed collections.</span>
           </div>
 
           <div className="member-wrapper">
-            <img className="profile-pic" src="img/models/team2.png"></img>
+            <img className="profile-pic" src="img/models/team2.jpg"></img>
             <span className="member-name">Aisha<br/>Malik</span>
             <span className="member-description">ZENI's sustainability advocate, holds a degree in Environmental Science from Kuala Lumpur University. She intertwines her passion for fashion and sustainability to craft designs that resonate with eco-conscious values, enriching ZENI's commitment to a harmonious and mindful approach.</span>
           </div>

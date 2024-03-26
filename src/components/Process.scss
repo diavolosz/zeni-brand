@@ -4,7 +4,7 @@ $accent-text-1: #1E1E1E;
 $accent-bkg-2: #7E6B51;
 $accent-text-2: #F0F0F0;
 $accent-bkg-3: #1D110E;
-$accent-text-3: #ECECEC;
+$accent-text-3: #ecececcb;
 $accent-bkg-4: #A2A093;
 $accent-text-4: #2C2C2C;
 $accent-bkg-5: #5a4727;
@@ -349,7 +349,7 @@ $accent-text-6: #2A2A2A;
                 }
 
                 .desc-right {
-                  margin-left: auto;
+                  margin: 1dvh 0 0 auto;
                   text-align: right;
                 }
               }
@@ -358,7 +358,7 @@ $accent-text-6: #2A2A2A;
             .right-container {
               width: 50%;
               display: flex;
-              align-items: end;
+              align-items: flex-end;
 
               img {
                 object-fit: cover;
@@ -438,7 +438,7 @@ $accent-text-6: #2A2A2A;
             .left-container {
               width: 50%;
               display: flex;
-              align-items: end;
+              align-items: flex-end;
 
               img {
                 object-fit: cover;
@@ -466,6 +466,7 @@ $accent-text-6: #2A2A2A;
 
           .header-wrapper {
             width: 95%;
+
             .header {
               font-family: 'silk-serif';
               font-size: 8dvw;
@@ -477,6 +478,7 @@ $accent-text-6: #2A2A2A;
             .head-left {
               text-align: start;
             }
+
             .head-right {
               text-align: end;
             }
@@ -517,6 +519,59 @@ $accent-text-6: #2A2A2A;
         background-color: $accent-bkg-6;
         color: $accent-text-1;
         top: calc($card-offset + 15dvh);
+
+        .card-desc-6 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          .header {
+            font-family: 'silk-serif';
+            font-size: 8dvw;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+          }
+
+          .head-bot {
+            margin-bottom: 0.2em;
+          }
+
+          .block-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 50%;
+            width: 98%;
+
+
+            img {
+              object-fit: cover;
+              height: 70%;
+              width: 60%;
+
+            }
+
+            .desc-container {
+              width: 48%;
+              text-align: center;
+
+              .desc {
+                text-transform: uppercase;
+                font-family: 'Work Sans', sans-serif;
+                font-size: 1vw;
+                line-height: 1.4vw;
+              }
+
+            }
+
+
+
+
+          }
+        }
       }
     }
   }
