@@ -7,23 +7,6 @@ export default function ImageDrag() {
     const container = containerRef.current;
 
     const images = [
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      'img/N3.png',
-      // Add more image URLs as needed
     ];
 
     const imageElements = [];

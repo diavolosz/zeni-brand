@@ -6,7 +6,7 @@ import { gsap } from "gsap"
 
 export default function LoadingScreen(props) {
 
-  const {view} = props
+  const { view } = props
 
   const tl = useRef(null)
 
@@ -82,7 +82,7 @@ export default function LoadingScreen(props) {
         }, "sequence-1")
     });
     return () => ctx.revert(); // <- cleanup!
-  },[])
+  }, [])
 
 
   return (
@@ -99,12 +99,20 @@ export default function LoadingScreen(props) {
       </div>
 
       <div className="center-description">
-        {(view === "default" || view === "landing") && 
+        {(view === "default" || view === "landing") &&
           <p>ZENI is a clothing-based creative studio that embodies neutrality, elegance, and peacefulness in each meticulously crafted artworks.</p>
         }
-        {view === "about" && 
+        {view === "about" &&
           <p>A commitment to crafting garments that transcend mere clothing, embodying a serene and timeless aesthetic.</p>
         }
+
+        {view === "process" &&
+          <p>Elegantly crafting gender-neutral fashion with sustainable practices, and delivers wardrobes tailored to your unique style and values.
+          </p>
+        }
+
+
+
       </div>
 
       <div className="center-animation">

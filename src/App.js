@@ -12,6 +12,7 @@ import AboutPage from './components/AboutPage';
 import Scrollbar from './components/Scrollbar';
 import TopNav from './components/TopNav';
 import LandingPage from './components/LandingPage';
+import Process from './components/Process';
 
 gsap.registerPlugin(ScrollSmoother)
 gsap.registerPlugin(ScrollToPlugin)
@@ -21,7 +22,9 @@ function App() {
 
 
   const [loading, setLoading] = useState(true)
+  // const [view, setView] = useState('process')
   const [view, setView] = useState('default')
+
   let body = document.querySelector('body')
   
 
@@ -58,6 +61,7 @@ function App() {
       {view === 'default' && <LandingPage view={view}/>}
       {view === 'about' && <AboutPage loading={loading}/>}
 
+      {view === 'process' && <Process loading={loading}/>}
 
 
     </div>
