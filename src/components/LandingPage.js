@@ -104,6 +104,7 @@ export default function LandingPage(props) {
 
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     let imgDisplayArr = document.querySelectorAll('.imgDisplay')
     imgDisplayArr.forEach((el, index) => {
       gsap.fromTo(el, {
