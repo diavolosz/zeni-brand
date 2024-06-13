@@ -58,50 +58,49 @@ export default function LandingPage(props) {
   const { view } = props
 
   useEffect(() => {
-    setTimeout(() => {
 
 
-      let InitialPosition
+    let InitialPosition
 
-      const imgDraggable = Draggable.create(".image-set", {
-        type: 'x',
-        bounds: ".scroller-container",
-        edgeResistance: 0.8,
-        dragResistance: 0.3,
-        throwProps: true,
-        overshootTolerance: 0.5,
-        inertia: true,
-        cursor: 'grab',
-        zIndexBoost: false,
-        onDrag: function () {
-          setXPosition((this.x - InitialPosition) / InitialPosition * 100)
-          // console.log('dragging', (this.x - InitialPosition))
-          // console.log('dragging', (this.x - InitialPosition)/InitialPosition*100)
-          gsap.to('.text', { opacity: 0, duration: 0.8 })
-        },
-        onThrowUpdate: function () {
-          setXPosition((this.x - InitialPosition) / InitialPosition * 100)
-          // console.log('throwing', (this.x - InitialPosition))
-          // console.log('throwing', (this.x - InitialPosition)/InitialPosition*100)
-        },
-        onThrowComplete: function () {
-          gsap.to('.text', { opacity: 1, duration: 0.8 })
-        }
-      })[0];
+    const imgDraggable = Draggable.create(".image-set", {
+      type: 'x',
+      bounds: ".scroller-container",
+      edgeResistance: 0.8,
+      dragResistance: 0.3,
+      throwProps: true,
+      overshootTolerance: 0.5,
+      inertia: true,
+      cursor: 'grab',
+      zIndexBoost: false,
+      onDrag: function () {
+        setXPosition((this.x - InitialPosition) / InitialPosition * 100)
+        // console.log('dragging', (this.x - InitialPosition))
+        // console.log('dragging', (this.x - InitialPosition)/InitialPosition*100)
+        gsap.to('.text', { opacity: 0, duration: 0.8 })
+      },
+      onThrowUpdate: function () {
+        setXPosition((this.x - InitialPosition) / InitialPosition * 100)
+        // console.log('throwing', (this.x - InitialPosition))
+        // console.log('throwing', (this.x - InitialPosition)/InitialPosition*100)
+      },
+      onThrowComplete: function () {
+        gsap.to('.text', { opacity: 1, duration: 0.8 })
+      }
+    })[0];
 
-      //find the width of draggable to set mid point on initial
-      let width = imgDraggable.minX
-      gsap.set('.image-set', { x: `${width / 2}` })
+    //find the width of draggable to set mid point on initial
+    let width = imgDraggable.minX
+    gsap.set('.image-set', { x: `${width / 2}` })
 
-      //set initial position for future update 
-      InitialPosition = imgDraggable.x
+    //set initial position for future update 
+    InitialPosition = imgDraggable.x
 
-      // Event listener for window resize
-      // Add event listener for window resize
-      const handleResize = () => { setWindowWidth(window.innerWidth) };
-      window.addEventListener('resize', handleResize);
+    // Event listener for window resize
+    // Add event listener for window resize
+    const handleResize = () => { setWindowWidth(window.innerWidth) };
+    window.addEventListener('resize', handleResize);
 
-    }, 100);
+
   }, [windowWidth]);
 
 
@@ -117,6 +116,11 @@ export default function LandingPage(props) {
         delay: imageDataSet[index].displayDelay - 0.08
       })
     })
+
+    setWindowWidth(window.innerWidth + 1)
+    setTimeout(() => {
+      setWindowWidth(window.innerWidth)
+    }, 100);
   }, [])
 
 
